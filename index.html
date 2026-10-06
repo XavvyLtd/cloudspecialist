@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>CloudSpecialist AI | Enterprise Cloud Engineering & AI Infrastructure</title>
+  <title>CloudSpecialist AI | Hands-On Cloud & Platform Engineering</title>
   
   <!-- Primary SEO -->
-  <meta content="CloudSpecialist AI engineers production Kubernetes architectures, automated FinOps cost governance, and high-throughput AI infrastructure for enterprise workloads." name="description"/>
-  <meta content="Enterprise Cloud Engineering, Kubernetes, DevSecOps, FinOps, AI Infrastructure, Cloud Migration, Platform Architecture" name="keywords"/>
+  <meta content="CloudSpecialist AI is an independent cloud engineering advisory. We partner directly with CTOs and engineering teams to fix Kubernetes complexity, eliminate cloud cost waste, and scale production AI workloads." name="description"/>
+  <meta content="Cloud Engineering, Kubernetes Architecture, Cloud Cost Reduction, FinOps, AI Infrastructure, DevOps, Platform Engineering" name="keywords"/>
   <meta content="CloudSpecialist AI" name="author"/>
   <meta content="index, follow" name="robots"/>
   <link href="https://www.cloudspecialist.work/" rel="canonical"/>
 
-  <!-- Open Graph / Social -->
+  <!-- Open Graph -->
   <meta content="website" property="og:type"/>
-  <meta content="CloudSpecialist AI | Enterprise Cloud Engineering" property="og:title"/>
-  <meta content="Resilient cloud ecosystems engineered for high-concurrency enterprise and AI workloads." property="og:description"/>
+  <meta content="CloudSpecialist AI | Hands-On Cloud & Platform Engineering" property="og:title"/>
+  <meta content="Senior cloud architects who write production code, tame Kubernetes sprawl, and cut cloud waste without the fluff." property="og:description"/>
   <meta content="https://www.cloudspecialist.work/" property="og:url"/>
   <meta content="CloudSpecialist AI" property="og:site_name"/>
   <meta content="https://www.cloudspecialist.work/logo.png" property="og:image"/>
@@ -23,55 +23,44 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.png"/>
   <link rel="apple-touch-icon" href="logo.png"/>
-  <meta content="#090d16" name="theme-color"/>
+  <meta content="#0d111a" name="theme-color"/>
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <!-- Google Fonts: Plus Jakarta Sans & Newsreader (Warm Editorial) & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500;1,6..72,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
 
   <!-- React 18 & Babel Standalone -->
   <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone@7.26.4/babel.min.js"></script>
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "CloudSpecialist AI",
-    "url": "https://www.cloudspecialist.work",
-    "logo": "https://www.cloudspecialist.work/logo.png",
-    "description": "Enterprise cloud engineering, Kubernetes orchestration, FinOps cost governance, and AI infrastructure specialists.",
-    "email": "hello@cloudspecialist.work",
-    "areaServed": "Global"
-  }
-  </script>
-
   <style>
     /* ==========================================================================
-       UNIFIED EDITORIAL DESIGN SYSTEM (SLEEK, FLUID, ZERO-BOXINESS)
+       HUMANE & SOPHISTICATED EDITORIAL DESIGN SYSTEM
        ========================================================================== */
     :root {
-      --bg-main: #090d16;
-      --bg-surface: #0e1524;
-      --bg-surface-elevated: #141d30;
+      --bg-dark: #0a0e17;
+      --bg-card: #101624;
+      --bg-card-subtle: #141b2c;
+      --bg-pill: rgba(255, 255, 255, 0.05);
       
-      --border-soft: rgba(255, 255, 255, 0.08);
-      --border-hover: rgba(56, 189, 248, 0.3);
+      --border-subtle: rgba(255, 255, 255, 0.09);
+      --border-light: rgba(255, 255, 255, 0.16);
       
-      --text-main: #ffffff;
+      --text-main: #f8fafc;
       --text-sub: #cbd5e1;
       --text-muted: #94a3b8;
       --text-dim: #64748b;
       
-      --accent-blue: #2563eb;
+      --accent-blue: #3b82f6;
+      --accent-blue-deep: #1d4ed8;
       --accent-cyan: #38bdf8;
-      --accent-emerald: #10b981;
-      --accent-indigo: #6366f1;
+      --accent-warm: #fef08a;
+      --accent-emerald: #34d399;
       
       --font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-serif: 'Newsreader', Georgia, serif;
       --font-body: 'Inter', -apple-system, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
     }
@@ -89,10 +78,10 @@
     }
 
     body {
-      background-color: var(--bg-main);
+      background-color: var(--bg-dark);
       color: var(--text-main);
       font-family: var(--font-body);
-      line-height: 1.65;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
@@ -109,33 +98,33 @@
 
     .container {
       width: 100%;
-      max-width: 1180px;
+      max-width: 1080px;
       margin: 0 auto;
       padding: 0 28px;
     }
 
-    /* Seamless Navigation */
-    .topbar {
+    /* Topbar Navigation */
+    .header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(9, 13, 22, 0.88);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border-soft);
-      height: 70px;
+      background: rgba(10, 14, 23, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      height: 72px;
       display: flex;
       align-items: center;
     }
 
-    .nav-content {
+    .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
     }
 
-    .brand-link {
+    .brand-group {
       display: flex;
       align-items: center;
       gap: 12px;
@@ -147,357 +136,244 @@
       border-radius: 8px;
     }
 
-    .brand-title-text {
+    .brand-text {
       font-family: var(--font-display);
-      font-size: 18px;
+      font-size: 17.5px;
       font-weight: 800;
       letter-spacing: -0.02em;
       color: #ffffff;
     }
 
-    .brand-title-text span {
+    .brand-text span {
       color: var(--accent-cyan);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 36px;
+      gap: 32px;
       list-style: none;
     }
 
-    .nav-item a {
-      font-size: 14px;
-      font-weight: 600;
+    .nav-link a {
+      font-size: 14.5px;
+      font-weight: 500;
       color: var(--text-muted);
       transition: color 0.2s ease;
     }
 
-    .nav-item a:hover {
+    .nav-link a:hover {
       color: #ffffff;
     }
 
-    .btn-cta {
+    .btn-talk {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
       gap: 8px;
-      padding: 11px 22px;
+      padding: 10px 22px;
       font-family: var(--font-display);
       font-size: 14px;
       font-weight: 700;
       color: #ffffff;
-      background: var(--accent-blue);
-      border-radius: 999px;
+      background: var(--accent-blue-deep);
       border: 1px solid rgba(255, 255, 255, 0.15);
-      transition: all 0.25s ease;
-    }
-
-    .btn-cta:hover {
-      background: #1d4ed8;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35);
-    }
-
-    .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 11px 22px;
-      font-family: var(--font-display);
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text-sub);
-      background: rgba(255, 255, 255, 0.04);
       border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      transition: all 0.25s ease;
+      transition: all 0.2s ease;
     }
 
-    .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.08);
-      color: #ffffff;
-      border-color: rgba(255, 255, 255, 0.2);
+    .btn-talk:hover {
+      background: var(--accent-blue);
+      transform: translateY(-1px);
     }
 
-    /* Hero Section: Editorial & Clean */
-    .hero-section {
-      padding: 100px 0 80px 0;
-      position: relative;
+    /* Hero Section */
+    .hero {
+      padding: 95px 0 75px 0;
     }
 
-    .hero-editorial {
-      max-width: 860px;
-    }
-
-    .tag-badge {
+    .hero-eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      font-family: var(--font-mono);
-      font-size: 12px;
+      gap: 10px;
+      font-size: 13.5px;
       font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
       color: var(--accent-cyan);
-      margin-bottom: 22px;
+      margin-bottom: 24px;
+      font-family: var(--font-mono);
     }
 
-    .hero-heading {
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-emerald);
+    }
+
+    .hero-title {
       font-family: var(--font-display);
-      font-size: clamp(40px, 5.2vw, 64px);
+      font-size: clamp(38px, 5vw, 60px);
       font-weight: 900;
-      line-height: 1.08;
+      line-height: 1.12;
       letter-spacing: -0.035em;
       color: #ffffff;
-      margin-bottom: 26px;
+      margin-bottom: 28px;
+      max-width: 960px;
     }
 
-    .hero-paragraph {
-      font-size: 20px;
-      line-height: 1.65;
+    .hero-title em {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 500;
+      color: #93c5fd;
+    }
+
+    .hero-description {
+      font-size: 19.5px;
+      line-height: 1.7;
       color: var(--text-sub);
-      margin-bottom: 40px;
-      max-width: 720px;
+      max-width: 780px;
+      margin-bottom: 38px;
     }
 
-    .hero-actions-row {
+    .hero-cta-group {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 16px;
-      margin-bottom: 60px;
+      margin-bottom: 56px;
     }
 
-    /* Integrated Horizontal Metrics Strip */
-    .metrics-strip {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 36px;
-      padding: 36px 0;
-      border-top: 1px solid var(--border-soft);
-      border-bottom: 1px solid var(--border-soft);
-    }
-
-    .metric-unit strong {
-      font-family: var(--font-mono);
-      font-size: 36px;
+    .btn-primary-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      font-family: var(--font-display);
+      font-size: 15px;
       font-weight: 700;
       color: #ffffff;
-      display: block;
-      line-height: 1;
-      margin-bottom: 8px;
+      background: #2563eb;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 999px;
+      transition: all 0.2s ease;
     }
 
-    .metric-unit span {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.5;
-      display: block;
+    .btn-primary-hero:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
     }
 
-    /* Trust & Standards Ribbon */
-    .trust-ribbon {
-      padding: 30px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 24px;
-      color: var(--text-muted);
-      font-size: 13.5px;
-      font-weight: 600;
-      border-bottom: 1px solid var(--border-soft);
-    }
-
-    .trust-ribbon-item {
-      display: flex;
+    .btn-ghost-hero {
+      display: inline-flex;
       align-items: center;
       gap: 8px;
-    }
-
-    .trust-ribbon-item svg {
-      width: 18px;
-      height: 18px;
-      color: var(--accent-cyan);
-    }
-
-    /* Unified Editorial Flow: 3 Core Practices */
-    .section-editorial {
-      padding: 100px 0;
-      border-bottom: 1px solid var(--border-soft);
-    }
-
-    .section-intro {
-      margin-bottom: 60px;
-      max-width: 760px;
-    }
-
-    .section-intro-title {
+      padding: 14px 26px;
       font-family: var(--font-display);
-      font-size: clamp(32px, 3.8vw, 44px);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-sub);
+      background: var(--bg-pill);
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-ghost-hero:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+    }
+
+    /* Founder Note / Direct Philosophy */
+    .philosophy-banner {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 32px 36px;
+      margin-bottom: 80px;
+    }
+
+    .philosophy-quote {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-style: italic;
+      line-height: 1.6;
+      color: #e2e8f0;
+      margin-bottom: 16px;
+    }
+
+    .philosophy-author {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .philosophy-author strong {
+      color: #ffffff;
+    }
+
+    /* Section Styles */
+    .editorial-section {
+      padding: 80px 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-cyan);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .section-title-large {
+      font-family: var(--font-display);
+      font-size: clamp(30px, 3.8vw, 44px);
       font-weight: 800;
       letter-spacing: -0.03em;
       line-height: 1.18;
       color: #ffffff;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
+      max-width: 820px;
     }
 
-    .section-intro-p {
+    .section-lead-text {
       font-size: 18px;
-      color: var(--text-sub);
       line-height: 1.7;
-    }
-
-    /* 3-Column Integrated Flow */
-    .pillars-flow {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-    }
-
-    .pillar-column {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .pillar-index {
-      font-family: var(--font-mono);
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--accent-cyan);
-      margin-bottom: 14px;
-      display: block;
-    }
-
-    .pillar-column h3 {
-      font-family: var(--font-display);
-      font-size: 22px;
-      font-weight: 800;
-      color: #ffffff;
-      margin-bottom: 14px;
-      letter-spacing: -0.02em;
-    }
-
-    .pillar-column p {
-      font-size: 15px;
       color: var(--text-sub);
-      line-height: 1.7;
-      margin-bottom: 24px;
+      max-width: 760px;
+      margin-bottom: 48px;
     }
 
-    .pillar-specs {
-      list-style: none;
-      padding-top: 18px;
-      border-top: 1px solid var(--border-soft);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .pillar-specs li {
-      font-size: 13.5px;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .pillar-specs li::before {
-      content: '→';
-      color: var(--accent-cyan);
-      font-weight: bold;
-    }
-
-    /* Audited Industry Benchmarks: Unified Comparison List */
-    .benchmarks-comparison-strip {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      background: var(--bg-surface);
-      border-radius: 20px;
-      padding: 50px;
-      border: 1px solid var(--border-soft);
-    }
-
-    .comparison-item {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border-soft);
-    }
-
-    .comparison-item:last-child {
-      border-bottom: none;
-    }
-
-    .comparison-item-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 6px;
-    }
-
-    .comparison-topic {
-      font-family: var(--font-display);
-      font-size: 16px;
-      font-weight: 700;
-      color: #ffffff;
-    }
-
-    .comparison-gain {
-      font-family: var(--font-mono);
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--accent-emerald);
-    }
-
-    .comparison-detail {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .comparison-source {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--text-dim);
-      margin-top: 4px;
-      display: block;
-    }
-
-    /* Case Study Spotlights */
-    .case-spotlight-grid {
+    /* The Real Problems Grid */
+    .problem-stories {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 32px;
+      margin-top: 36px;
     }
 
-    .case-spotlight-item {
-      border-top: 2px solid var(--border-soft);
-      padding-top: 24px;
+    .story-item {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
 
-    .case-spotlight-item:hover {
-      border-top-color: var(--accent-cyan);
-    }
-
-    .case-badge-meta {
+    .story-tag {
       font-family: var(--font-mono);
-      font-size: 11.5px;
+      font-size: 12px;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent-cyan);
+      color: #fbbf24;
       margin-bottom: 12px;
-      display: block;
     }
 
-    .case-spotlight-item h4 {
+    .story-item h3 {
       font-family: var(--font-display);
       font-size: 20px;
       font-weight: 800;
@@ -506,166 +382,250 @@
       line-height: 1.3;
     }
 
-    .case-spotlight-item p {
-      font-size: 14.5px;
+    .story-item p {
+      font-size: 15px;
       color: var(--text-sub);
-      line-height: 1.65;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .story-resolution {
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 13.5px;
+      color: var(--accent-cyan);
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    /* How We Work - Human Stages */
+    .steps-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin-top: 36px;
+    }
+
+    .step-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 36px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .step-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .step-meta {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+    }
+
+    .step-body h4 {
+      font-family: var(--font-display);
+      font-size: 21px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .step-body p {
+      font-size: 15.5px;
+      color: var(--text-sub);
+      line-height: 1.7;
+      max-width: 720px;
+    }
+
+    /* Honest Case Studies */
+    .case-stories-list {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-top: 36px;
+    }
+
+    .case-story-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .case-story-block h4 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+
+    .case-story-block p {
+      font-size: 15px;
+      color: var(--text-sub);
+      line-height: 1.7;
+    }
+
+    .case-impact-column {
+      background: var(--bg-card-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .kpi-big {
+      font-family: var(--font-mono);
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--accent-emerald);
+      display: block;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .kpi-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.4;
+      display: block;
+    }
+
+    /* Contact Section: Direct & Transparent */
+    .contact-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 48px;
+      margin-top: 40px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+
+    .contact-left h3 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+
+    .contact-left p {
+      font-size: 16px;
+      color: var(--text-sub);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .direct-email-box {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      color: var(--accent-cyan);
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 12px 18px;
+      border-radius: 8px;
+      display: inline-block;
       margin-bottom: 24px;
     }
 
-    .case-kpi-row {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      padding-top: 14px;
-      border-top: 1px solid var(--border-soft);
+    .form-group-humane {
+      margin-bottom: 16px;
     }
 
-    .case-kpi-row strong {
-      font-family: var(--font-mono);
-      font-size: 26px;
-      font-weight: 700;
-      color: var(--accent-emerald);
-    }
-
-    .case-kpi-row span {
-      font-size: 12.5px;
-      color: var(--text-muted);
-    }
-
-    /* Consultation & Scoping Form: Clean & Integrated */
-    .consultation-wrap {
-      display: grid;
-      grid-template-columns: 1fr 1.1fr;
-      gap: 60px;
-      align-items: center;
-      background: var(--bg-surface);
-      border-radius: 24px;
-      padding: 56px;
-      border: 1px solid var(--border-soft);
-    }
-
-    .form-grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-bottom: 18px;
-    }
-
-    .form-group-unified {
-      margin-bottom: 18px;
-    }
-
-    .field-label {
+    .form-group-humane label {
       display: block;
-      font-size: 13px;
+      font-size: 13.5px;
       font-weight: 600;
       color: var(--text-sub);
       margin-bottom: 6px;
     }
 
-    .field-input, .field-select, .field-textarea {
+    .form-input-humane, .form-select-humane, .form-textarea-humane {
       width: 100%;
-      padding: 13px 16px;
-      background: #080c16;
-      border: 1px solid var(--border-soft);
+      padding: 12px 16px;
+      background: #090d16;
+      border: 1px solid var(--border-subtle);
       border-radius: 8px;
       color: #ffffff;
       font-family: inherit;
-      font-size: 14px;
+      font-size: 14.5px;
       transition: border-color 0.2s ease;
     }
 
-    .field-input:focus, .field-select:focus, .field-textarea:focus {
+    .form-input-humane:focus, .form-select-humane:focus, .form-textarea-humane:focus {
       outline: none;
       border-color: var(--accent-cyan);
     }
 
-    .field-textarea {
-      min-height: 90px;
+    .form-textarea-humane {
+      min-height: 95px;
       resize: vertical;
     }
 
+    .btn-submit-humane {
+      width: 100%;
+      padding: 14px;
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+      background: var(--accent-blue);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      margin-top: 8px;
+    }
+
+    .btn-submit-humane:hover {
+      background: var(--accent-blue-deep);
+    }
+
     /* Footer */
-    .footer-unified {
-      padding: 70px 0 35px 0;
-      background: #060910;
+    .footer {
+      padding: 60px 0 30px 0;
+      border-top: 1px solid var(--border-subtle);
       font-size: 13.5px;
       color: var(--text-dim);
     }
 
-    .footer-main-row {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 48px;
-      padding-bottom: 48px;
-      border-bottom: 1px solid var(--border-soft);
-    }
-
-    .footer-col h5 {
-      font-family: var(--font-display);
-      font-size: 13.5px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #ffffff;
-      margin-bottom: 18px;
-    }
-
-    .footer-col ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 11px;
-    }
-
-    .footer-col ul a:hover {
-      color: #ffffff;
-    }
-
-    .footer-bottom-row {
+    .footer-flex {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 26px;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
     /* Responsive */
-    @media (max-width: 1024px) {
-      .pillars-flow, .case-spotlight-grid {
+    @media (max-width: 900px) {
+      .problem-stories, .case-story-block, .contact-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 32px;
       }
-      .benchmarks-comparison-strip, .consultation-wrap {
+      .step-row {
         grid-template-columns: 1fr;
-        padding: 36px;
+        gap: 10px;
       }
-      .footer-main-row {
-        grid-template-columns: 1fr 1fr;
+      .contact-block {
+        padding: 32px 24px;
       }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-      .metrics-strip {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-      .form-grid-2 {
-        grid-template-columns: 1fr;
-      }
-      .hero-section {
-        padding: 60px 0 40px 0;
-      }
-      .footer-main-row {
-        grid-template-columns: 1fr;
-      }
-      .footer-bottom-row {
-        flex-direction: column;
-        gap: 14px;
-        text-align: center;
+      .hero-title {
+        font-size: 36px;
       }
     }
   </style>
@@ -679,466 +639,334 @@
     const { useState } = React;
 
     function App() {
-      const [formData, setFormData] = useState({
-        fullName: '',
+      const [form, setForm] = useState({
+        name: '',
         email: '',
         environment: 'AWS',
-        spendTier: '$50k - $150k / mo',
-        scope: 'Kubernetes Platform Architecture',
-        notes: ''
+        context: ''
       });
 
-      const handleSubmit = (e) => {
+      const handleContact = (e) => {
         e.preventDefault();
-        const body = `Full Name: ${formData.fullName}
-Work Email: ${formData.email}
-Primary Environment: ${formData.environment}
-Monthly Spend Tier: ${formData.spendTier}
-Engagement Scope: ${formData.scope}
+        const body = `Name: ${form.name}
+Work Email: ${form.email}
+Primary Environment: ${form.environment}
 
-Project Requirements:
-${formData.notes}`;
+What we are trying to solve:
+${form.context}`;
 
-        const mailto = `mailto:hello@cloudspecialist.work?subject=${encodeURIComponent('CloudSpecialist AI - Enterprise Architecture Consultation: ' + formData.fullName)}&body=${encodeURIComponent(body)}`;
+        const mailto = `mailto:hello@cloudspecialist.work?subject=${encodeURIComponent('Architecture Conversation with ' + form.name)}&body=${encodeURIComponent(body)}`;
 
         try {
           window.open(mailto, '_self');
         } catch (err) {
           navigator.clipboard.writeText(body);
-          alert('Details copied to clipboard. Please email: hello@cloudspecialist.work');
+          alert('Details copied to clipboard. Please email hello@cloudspecialist.work');
         }
       };
 
       return (
         <div>
           {/* Header */}
-          <header className="topbar">
+          <header className="header">
             <div className="container">
-              <div className="nav-content">
-                <a href="#" className="brand-link">
+              <div className="header-inner">
+                <a href="#" className="brand-group">
                   <img src="logo.png" alt="CloudSpecialist AI Logo" className="brand-logo-img"/>
-                  <div className="brand-title-text">CLOUDSPECIALIST <span>AI</span></div>
+                  <div className="brand-text">CLOUDSPECIALIST <span>AI</span></div>
                 </a>
 
                 <ul className="nav-links">
-                  <li className="nav-item"><a href="#capabilities">Capabilities</a></li>
-                  <li className="nav-item"><a href="#benchmarks">Benchmarks</a></li>
-                  <li className="nav-item"><a href="#cases">Case Studies</a></li>
+                  <li className="nav-link"><a href="#problems">What We Fix</a></li>
+                  <li className="nav-link"><a href="#how-we-work">How We Work</a></li>
+                  <li className="nav-link"><a href="#results">Case Work</a></li>
                 </ul>
 
-                <a href="#consultation" className="btn-cta">
-                  Scope Engagement
+                <a href="#contact" className="btn-talk">
+                  Start a Conversation
                 </a>
               </div>
             </div>
           </header>
 
           {/* Hero Section */}
-          <section className="hero-section">
+          <section className="hero">
             <div className="container">
-              <div className="hero-editorial">
-                <div className="tag-badge">Enterprise Cloud Advisory & Engineering</div>
-                <h1 className="hero-heading">
-                  Architecting Resilient Cloud Infrastructure for Scale.
-                </h1>
-                <p className="hero-paragraph">
-                  CloudSpecialist AI engineers mission-critical Kubernetes platforms, autonomous FinOps cost governance, and scalable AI infrastructure for enterprise organizations requiring guaranteed SLAs.
-                </p>
-
-                <div className="hero-actions-row">
-                  <a href="#consultation" className="btn-cta" style={{ padding: '14px 30px', fontSize: '15px' }}>
-                    Schedule Architecture Review
-                  </a>
-                  <a href="#capabilities" className="btn-outline" style={{ padding: '14px 28px', fontSize: '15px' }}>
-                    Explore Capabilities
-                  </a>
-                </div>
+              <div className="hero-eyebrow">
+                Independent Platform & Cloud Engineers
               </div>
 
-              {/* Integrated Metrics Strip */}
-              <div className="metrics-strip">
-                <div className="metric-unit">
-                  <strong>99.999%</strong>
-                  <span>High availability SLA with multi-region active-active failover</span>
-                </div>
-                <div className="metric-unit">
-                  <strong>41.8%</strong>
-                  <span>Average audited cloud spend recovery through FinOps governance</span>
-                </div>
-                <div className="metric-unit">
-                  <strong>&lt; 15ms</strong>
-                  <span>P99 inference latency delivered on optimized AI clusters</span>
-                </div>
+              <h1 className="hero-title">
+                We fix the cloud problems that <em>keep engineering leaders awake</em> at night.
+              </h1>
+
+              <p className="hero-description">
+                Most cloud migrations don't stall because of AWS or Azure. They stall because teams get overwhelmed by runaway bills, brittle Kubernetes clusters, and AI workloads that choke in production. We partner directly with your engineering team to fix the foundation — hands-on, in production code.
+              </p>
+
+              <div className="hero-cta-group">
+                <a href="#contact" className="btn-primary-hero">
+                  Book a 30-Minute Technical Call
+                </a>
+                <a href="#problems" className="btn-ghost-hero">
+                  Read What We Solve →
+                </a>
               </div>
 
-              {/* Trust Standards Ribbon */}
-              <div className="trust-ribbon">
-                <div className="trust-ribbon-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  <span>SOC 2 Type II Practice</span>
+              {/* Founder/Architect Statement */}
+              <div className="philosophy-banner">
+                <div className="philosophy-quote">
+                  "No 80-page PowerPoint decks, no junior consultants billed as experts. You work directly with principal engineers who have designed multi-region platforms, optimized GPU inference pipelines, and reclaimed millions in wasted cloud spend."
                 </div>
-                <div className="trust-ribbon-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
-                  <span>ISO 27001 Framework</span>
-                </div>
-                <div className="trust-ribbon-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
-                  <span>AWS Advanced Tier</span>
-                </div>
-                <div className="trust-ribbon-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-                  <span>Microsoft Azure Gold</span>
-                </div>
-                <div className="trust-ribbon-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polygon points="2 17 12 22 22 17"/><polygon points="2 12 12 17 22 12"/></svg>
-                  <span>CNCF Kubernetes Certified</span>
+                <div className="philosophy-author">
+                  <strong>Principal Engineering Practice</strong> — CloudSpecialist AI
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Core Practice Areas: 3-Column Integrated Flow */}
-          <section className="section-editorial" id="capabilities">
+          {/* The Real Problems Section */}
+          <section className="editorial-section" id="problems">
             <div className="container">
-              <div className="section-intro">
-                <div className="tag-badge">Engineering Practices</div>
-                <h2 className="section-intro-title">Three Core Pillars of Enterprise Scale</h2>
-                <p className="section-intro-p">
-                  We focus on eliminating operational risk, removing cloud cost waste, and enabling high-throughput AI workloads.
-                </p>
-              </div>
+              <span className="section-label">The Reality of Modern Cloud</span>
+              <h2 className="section-title-large">
+                Three symptoms that tell us an infrastructure needs intervention.
+              </h2>
+              <p className="section-lead-text">
+                These are the recurring challenges CTOs and engineering directors bring to us when their teams are stretched thin.
+              </p>
 
-              <div className="pillars-flow">
-                <div className="pillar-column">
-                  <div>
-                    <span className="pillar-index">01 / PLATFORM</span>
-                    <h3>Kubernetes & Service Mesh</h3>
-                    <p>
-                      Hardened EKS, AKS, and GKE cluster design with Karpenter dynamic scaling, Cilium eBPF networking, and zero-downtime rolling ingress.
-                    </p>
-                  </div>
-                  <ul className="pillar-specs">
-                    <li>Multi-Region Active-Active Topologies</li>
-                    <li>Declarative ArgoCD GitOps Automation</li>
-                    <li>Sub-Second Automated Failover</li>
-                  </ul>
-                </div>
-
-                <div className="pillar-column">
-                  <div>
-                    <span className="pillar-index">02 / FINOPS</span>
-                    <h3>Cloud Cost Governance</h3>
-                    <p>
-                      Continuous unit-economics tracking, spot instance fleet arbitrage, and commitment discount optimization delivering 35%–48% cost recovery.
-                    </p>
-                  </div>
-                  <ul className="pillar-specs">
-                    <li>Automated Karpenter Rightsizing</li>
-                    <li>Savings Plan & RI Coverage (94%+)</li>
-                    <li>Tenant-Level Spend Observability</li>
-                  </ul>
-                </div>
-
-                <div className="pillar-column">
-                  <div>
-                    <span className="pillar-index">03 / AI & GPU</span>
-                    <h3>AI Inference Infrastructure</h3>
-                    <p>
-                      High-throughput model serving pipelines on Ray, vLLM, and TensorRT-LLM with GPU memory slicing (MIG) on automated spot fleets.
-                    </p>
-                  </div>
-                  <ul className="pillar-specs">
-                    <li>Sub-15ms P99 Token Latency</li>
-                    <li>88%–94% Peak GPU Utilization</li>
-                    <li>Low-Latency Vector Database Mesh</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Audited Benchmarks: Unified Split Comparison */}
-          <section className="section-editorial" id="benchmarks">
-            <div className="container">
-              <div className="benchmarks-comparison-strip">
-                <div>
-                  <div className="tag-badge">Audited Telemetry</div>
-                  <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '34px', fontWeight: 800, lineHeight: 1.2, color: '#ffffff', marginBottom: '18px' }}>
-                    Sourced Benchmarks vs. CloudSpecialist Deliverables
-                  </h2>
-                  <p style={{ color: 'var(--text-sub)', fontSize: '16px', lineHeight: 1.7, marginBottom: '24px' }}>
-                    Unoptimized cloud infrastructure silently drains enterprise margins. We apply empirical platform engineering to reclaim budget and accelerate velocity.
+              <div className="problem-stories">
+                <div className="story-item">
+                  <span className="story-tag">01 / RUNAWAY COST</span>
+                  <h3>The $80,000/Month Surprise</h3>
+                  <p>
+                    Your cloud bill grew 40% quarter-over-quarter, but traffic only grew 10%. Over-provisioned nodes, unattached storage volumes, and unoptimized batch jobs are quietly consuming your budget.
                   </p>
-                  <div style={{ color: 'var(--text-muted)', fontSize: '13.5px' }}>
-                    Verified against Flexera 2025 State of the Cloud & DORA DevOps standards.
+                  <div className="story-resolution">
+                    → How we fix it: We implement Karpenter dynamic rightsizing and spot arbitrage, cutting 35%–48% of compute spend within 30 days.
                   </div>
                 </div>
 
-                <div>
-                  <div className="comparison-item">
-                    <div className="comparison-item-header">
-                      <span className="comparison-topic">Cloud Spend Waste</span>
-                      <span className="comparison-gain">35% – 48% Reclaimed</span>
-                    </div>
-                    <p className="comparison-detail">
-                      Flexera 2025 reports 32% of enterprise cloud compute is unallocated or idle. We eliminate over-provisioning via automated spot fleets.
-                    </p>
-                    <span className="comparison-source">Flexera State of the Cloud Report 2025</span>
-                  </div>
-
-                  <div className="comparison-item">
-                    <div className="comparison-item-header">
-                      <span className="comparison-topic">Deployment Frequency & MTTR</span>
-                      <span className="comparison-gain">208x Faster / &lt;6m MTTR</span>
-                    </div>
-                    <p className="comparison-detail">
-                      DORA research shows elite GitOps teams deploy 208x more frequently with 7x lower change failure rates through automated DevSecOps.
-                    </p>
-                    <span className="comparison-source">DORA DevOps Research & Assessment</span>
-                  </div>
-
-                  <div className="comparison-item">
-                    <div className="comparison-item-header">
-                      <span className="comparison-topic">AI & GPU Utilization</span>
-                      <span className="comparison-gain">88% – 94% Peak Efficiency</span>
-                    </div>
-                    <p className="comparison-detail">
-                      Stanford AI Index highlights over 80% of enterprise AI models suffer from GPU memory bottlenecks. We partition compute with vLLM dynamic batching.
-                    </p>
-                    <span className="comparison-source">Stanford AI Index & Gartner 2025</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Case Studies: Spotlight Row */}
-          <section className="section-editorial" id="cases">
-            <div className="container">
-              <div className="section-intro">
-                <div className="tag-badge">Client Transformations</div>
-                <h2 className="section-intro-title">Proven Enterprise Outcomes</h2>
-                <p className="section-intro-p">
-                  Selected delivery highlights across financial services, healthtech, and global digital commerce.
-                </p>
-              </div>
-
-              <div className="case-spotlight-grid">
-                <div className="case-spotlight-item">
-                  <div>
-                    <span className="case-badge-meta">Global FinTech & Banking</span>
-                    <h4>Core Banking Kubernetes Modernization</h4>
-                    <p>
-                      Migrated 340+ distributed banking microservices to a multi-region EKS cluster with active-active PCI-DSS Level 1 compliance.
-                    </p>
-                  </div>
-                  <div className="case-kpi-row">
-                    <strong>44.2%</strong>
-                    <span>Compute cost reduction across 12 regions (99.999% SLA)</span>
-                  </div>
-                </div>
-
-                <div className="case-spotlight-item">
-                  <div>
-                    <span className="case-badge-meta">Genomics & AI HealthTech</span>
-                    <h4>High-Throughput LLM Inference Cluster</h4>
-                    <p>
-                      Orchestrated containerized Ray and vLLM inference workloads on automated GPU spot fleets, cutting inference latency from 140ms to 18ms.
-                    </p>
-                  </div>
-                  <div className="case-kpi-row">
-                    <strong>7.8x</strong>
-                    <span>Higher throughput concurrency per GPU node (P99 18.2ms)</span>
-                  </div>
-                </div>
-
-                <div className="case-spotlight-item">
-                  <div>
-                    <span className="case-badge-meta">Omnichannel Retail</span>
-                    <h4>Black Friday Scale (4.2M Req/Min)</h4>
-                    <p>
-                      Engineered auto-scaling Kubernetes infrastructure with Karpenter that absorbed 4.2 million requests/minute with zero platform incidents.
-                    </p>
-                  </div>
-                  <div className="case-kpi-row">
-                    <strong>100%</strong>
-                    <span>Uptime during record $85M peak sales window</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Direct Consultation / Engagement Form */}
-          <section className="section-editorial" id="consultation" style={{ borderBottom: 'none' }}>
-            <div className="container">
-              <div className="consultation-wrap">
-                <div>
-                  <div className="tag-badge">Direct Access</div>
-                  <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '34px', fontWeight: 800, color: '#ffffff', marginBottom: '16px', lineHeight: 1.2 }}>
-                    Scope an Enterprise Architecture Review
-                  </h2>
-                  <p style={{ color: 'var(--text-sub)', lineHeight: 1.7, marginBottom: '28px' }}>
-                    Speak directly with a Principal Cloud Architect to evaluate your infrastructure, review cloud spend governance, or design your production platform roadmap.
+                <div className="story-item">
+                  <span className="story-tag">02 / DEVELOPER FRICTION</span>
+                  <h3>The Brittle Kubernetes Trap</h3>
+                  <p>
+                    Deployments take 45 minutes, staging environments constantly drift from production, and your senior engineers spend half their week debugging CI/CD pipelines instead of shipping features.
                   </p>
-
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', fontSize: '14px', color: 'var(--text-sub)' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <span style={{ color: 'var(--accent-emerald)', fontWeight: 'bold' }}>✓</span>
-                      <span>30-minute architectural assessment with zero sales intermediaries</span>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <span style={{ color: 'var(--accent-emerald)', fontWeight: 'bold' }}>✓</span>
-                      <span>Preliminary FinOps savings and infrastructure roadmap</span>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <span style={{ color: 'var(--accent-emerald)', fontWeight: 'bold' }}>✓</span>
-                      <span>Full enterprise NDA protection</span>
-                    </div>
+                  <div className="story-resolution">
+                    → How we fix it: We build clean GitOps pipelines with ArgoCD and eBPF networking, cutting release cycles to minutes with automated rollbacks.
                   </div>
                 </div>
 
-                <form onSubmit={handleSubmit}>
-                  <div className="form-grid-2">
-                    <div>
-                      <label className="field-label">Full Name</label>
+                <div className="story-item">
+                  <span className="story-tag">03 / AI IN PRODUCTION</span>
+                  <h3>The GPU Bottleneck</h3>
+                  <p>
+                    Your data science team trained a great model, but when real users hit it, inference latency spikes to 2 seconds and GPUs sit idle at 40% memory utilization.
+                  </p>
+                  <div className="story-resolution">
+                    → How we fix it: We orchestrate model serving with vLLM, TensorRT, and Ray on partitioned spot GPUs, dropping P99 latency below 15ms.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* How We Actually Work */}
+          <section className="editorial-section" id="how-we-work">
+            <div className="container">
+              <span className="section-label">Engagement Model</span>
+              <h2 className="section-title-large">
+                How we work with your team (No vendor lock-in).
+              </h2>
+              <p className="section-lead-text">
+                We believe in leaving your internal team stronger and fully self-sufficient. Everything we build is written in clean, modular Terraform and documented for your engineers.
+              </p>
+
+              <div className="steps-timeline">
+                <div className="step-row">
+                  <div className="step-meta">WEEK 1 – 2</div>
+                  <div className="step-body">
+                    <h4>Targeted Diagnostic & Cost Audit</h4>
+                    <p>
+                      We audit your Kubernetes clusters, cloud telemetry, and billing data. We pinpoint exact bottlenecks, security gaps, and immediate cost savings with zero production disruption.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="step-row">
+                  <div className="step-meta">WEEK 3 – 6</div>
+                  <div className="step-body">
+                    <h4>Hands-On Architecture & POC</h4>
+                    <p>
+                      We author modular Terraform blueprints, configure hardened cluster pipelines, and benchmark performance in staging alongside your lead engineers.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="step-row">
+                  <div className="step-meta">WEEK 7 – 10</div>
+                  <div className="step-body">
+                    <h4>Zero-Downtime Production Cutover</h4>
+                    <p>
+                      Phased canary rollout with active-active routing, automated failovers, and live validation under peak customer traffic.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="step-row">
+                  <div className="step-meta">ONGOING</div>
+                  <div className="step-body">
+                    <h4>Complete Knowledge Transfer & SLA Peace of Mind</h4>
+                    <p>
+                      Your team receives full repository ownership, runbooks, and architectural documentation. We remain available for escalations and quarterly reviews.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Real Case Work */}
+          <section className="editorial-section" id="results">
+            <div className="container">
+              <span className="section-label">Proven Results</span>
+              <h2 className="section-title-large">
+                A few examples of what we've delivered.
+              </h2>
+
+              <div className="case-stories-list">
+                <div className="case-story-block">
+                  <div>
+                    <span style={{ fontSize: '12.5px', fontFamily: 'var(--font-mono)', color: 'var(--accent-cyan)', fontWeight: 700 }}>
+                      FINANCIAL SERVICES
+                    </span>
+                    <h4 style={{ marginTop: '6px' }}>Re-architecting a Multi-Region Banking Core</h4>
+                    <p>
+                      A growing fintech was struggling with Kubernetes cluster drift and strict PCI-DSS audit deadlines. We migrated 340+ microservices to automated multi-region EKS with Cilium eBPF encryption, achieving zero downtime cutover.
+                    </p>
+                  </div>
+                  <div className="case-impact-column">
+                    <span className="kpi-big">44.2%</span>
+                    <span className="kpi-label">Reduction in annual cloud infrastructure spend with 99.999% uptime</span>
+                  </div>
+                </div>
+
+                <div className="case-story-block">
+                  <div>
+                    <span style={{ fontSize: '12.5px', fontFamily: 'var(--font-mono)', color: 'var(--accent-cyan)', fontWeight: 700 }}>
+                      BIOMEDICAL AI PLATFORM
+                    </span>
+                    <h4 style={{ marginTop: '6px' }}>Scaling LLM Inference from 140ms to 18ms</h4>
+                    <p>
+                      A healthtech genomics startup faced massive GPU memory starvation under concurrent hospital API queries. We restructured their serving pipeline with vLLM and dynamic GPU slicing (MIG) on spot fleets.
+                    </p>
+                  </div>
+                  <div className="case-impact-column">
+                    <span className="kpi-big">7.8x</span>
+                    <span className="kpi-label">Higher concurrent query throughput per GPU instance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Direct Consultation / Contact */}
+          <section className="editorial-section" id="contact" style={{ borderBottom: 'none' }}>
+            <div className="container">
+              <div className="contact-block">
+                <div className="contact-grid">
+                  <div className="contact-left">
+                    <h3>Let's talk about your infrastructure.</h3>
+                    <p>
+                      No salespeople. You'll speak directly with a principal cloud architect about your architecture, current pain points, and realistic timelines.
+                    </p>
+                    
+                    <div style={{ marginBottom: '16px' }}>
+                      <span style={{ fontSize: '12.5px', color: 'var(--text-dim)', display: 'block', marginBottom: '4px' }}>DIRECT INBOX</span>
+                      <a href="mailto:hello@cloudspecialist.work" className="direct-email-box">
+                        hello@cloudspecialist.work
+                      </a>
+                    </div>
+
+                    <div style={{ fontSize: '14px', color: 'var(--text-muted)', lineHeight: 1.6 }}>
+                      🔒 Full NDA confidentiality guaranteed on all initial discussions.
+                    </div>
+                  </div>
+
+                  <form onSubmit={handleContact}>
+                    <div className="form-group-humane">
+                      <label>Your Name</label>
                       <input 
                         type="text" 
-                        className="field-input" 
-                        placeholder="e.g. Sarah Jenkins"
+                        className="form-input-humane" 
+                        placeholder="e.g. Alex Morgan"
                         required
-                        value={formData.fullName}
-                        onChange={(e) => setFormData({...formData, fullName: e.target.value})}
+                        value={form.name}
+                        onChange={(e) => setForm({...form, name: e.target.value})}
                       />
                     </div>
-                    <div>
-                      <label className="field-label">Work Email</label>
+
+                    <div className="form-group-humane">
+                      <label>Work Email</label>
                       <input 
                         type="email" 
-                        className="field-input" 
-                        placeholder="sarah@enterprise.com"
+                        className="form-input-humane" 
+                        placeholder="alex@company.com"
                         required
-                        value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        value={form.email}
+                        onChange={(e) => setForm({...form, email: e.target.value})}
                       />
                     </div>
-                  </div>
 
-                  <div className="form-grid-2">
-                    <div>
-                      <label className="field-label">Primary Environment</label>
+                    <div className="form-group-humane">
+                      <label>Primary Cloud Provider</label>
                       <select 
-                        className="field-select"
-                        value={formData.environment}
-                        onChange={(e) => setFormData({...formData, environment: e.target.value})}
+                        className="form-select-humane"
+                        value={form.environment}
+                        onChange={(e) => setForm({...form, environment: e.target.value})}
                       >
-                        <option value="AWS">Amazon Web Services (AWS)</option>
+                        <option value="AWS">AWS</option>
                         <option value="Azure">Microsoft Azure</option>
                         <option value="GCP">Google Cloud Platform</option>
-                        <option value="Multi-Cloud">Multi-Cloud / Hybrid</option>
+                        <option value="Multi-Cloud / Hybrid">Multi-Cloud / Hybrid</option>
                       </select>
                     </div>
-                    <div>
-                      <label className="field-label">Monthly Cloud Spend</label>
-                      <select 
-                        className="field-select"
-                        value={formData.spendTier}
-                        onChange={(e) => setFormData({...formData, spendTier: e.target.value})}
-                      >
-                        <option value="< $50k / mo">&lt; $50,000 / mo</option>
-                        <option value="$50k - $150k / mo">$50,000 – $150,000 / mo</option>
-                        <option value="$150k - $500k / mo">$150,000 – $500,000 / mo</option>
-                        <option value="> $500k / mo">&gt; $500,000 / mo</option>
-                      </select>
+
+                    <div className="form-group-humane">
+                      <label>What's the main challenge you're looking to solve?</label>
+                      <textarea 
+                        className="form-textarea-humane" 
+                        placeholder="e.g. Cloud spend grew unexpectedly, need to scale an AI inference cluster, or planning a Kubernetes migration..."
+                        value={form.context}
+                        onChange={(e) => setForm({...form, context: e.target.value})}
+                      ></textarea>
                     </div>
-                  </div>
 
-                  <div className="form-group-unified">
-                    <label className="field-label">Primary Focus</label>
-                    <select 
-                      className="field-select"
-                      value={formData.scope}
-                      onChange={(e) => setFormData({...formData, scope: e.target.value})}
-                    >
-                      <option value="Kubernetes Platform Architecture">Kubernetes Platform Architecture</option>
-                      <option value="FinOps & Cost Optimization Audit">FinOps & Cost Optimization Audit</option>
-                      <option value="AI / GPU Infrastructure Orchestration">AI / GPU Infrastructure Orchestration</option>
-                      <option value="Zero-Downtime Cloud Migration">Zero-Downtime Cloud Migration</option>
-                      <option value="DevSecOps & Compliance Hardening">DevSecOps & Compliance Hardening</option>
-                    </select>
-                  </div>
-
-                  <div className="form-group-unified">
-                    <label className="field-label">Key Objectives / Timelines</label>
-                    <textarea 
-                      className="field-textarea" 
-                      placeholder="Briefly describe current bottlenecks, scale requirements, or target completion dates..."
-                      value={formData.notes}
-                      onChange={(e) => setFormData({...formData, notes: e.target.value})}
-                    ></textarea>
-                  </div>
-
-                  <button type="submit" className="btn-cta" style={{ width: '100%', padding: '14px' }}>
-                    Submit Architecture Review Request
-                  </button>
-                </form>
+                    <button type="submit" className="btn-submit-humane">
+                      Send to Principal Architect →
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </section>
 
-          {/* Enterprise Footer */}
-          <footer className="footer-unified">
+          {/* Footer */}
+          <footer className="footer">
             <div className="container">
-              <div className="footer-main-row">
+              <div className="footer-flex">
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <img src="logo.png" alt="Logo" style={{ width: '26px', height: '26px', borderRadius: '6px' }}/>
+                  <span style={{ fontWeight: 700, color: '#ffffff' }}>CloudSpecialist AI</span>
+                  <span style={{ color: 'var(--text-dim)' }}>— Hands-on Cloud & Platform Engineering</span>
+                </div>
+
                 <div>
-                  <div className="brand-link" style={{ marginBottom: '14px' }}>
-                    <img src="logo.png" alt="CloudSpecialist AI Logo" style={{ width: '32px', height: '32px', borderRadius: '6px' }}/>
-                    <div className="brand-title-text" style={{ fontSize: '17px' }}>CLOUDSPECIALIST <span>AI</span></div>
-                  </div>
-                  <p style={{ maxWidth: '320px', lineHeight: 1.6, color: 'var(--text-muted)' }}>
-                    Enterprise cloud engineering and platform modernization firm delivering mission-critical Kubernetes, FinOps, and AI infrastructure.
-                  </p>
-                  <div style={{ marginTop: '14px', color: 'var(--accent-cyan)', fontFamily: 'var(--font-mono)', fontSize: '13px' }}>
+                  <a href="mailto:hello@cloudspecialist.work" style={{ color: 'var(--accent-cyan)', fontFamily: 'var(--font-mono)' }}>
                     hello@cloudspecialist.work
-                  </div>
-                </div>
-
-                <div className="footer-col">
-                  <h5>Practice Areas</h5>
-                  <ul>
-                    <li><a href="#capabilities">Kubernetes Platform</a></li>
-                    <li><a href="#capabilities">FinOps Cost Recovery</a></li>
-                    <li><a href="#capabilities">AI Infrastructure</a></li>
-                    <li><a href="#capabilities">DevSecOps Hardening</a></li>
-                  </ul>
-                </div>
-
-                <div className="footer-col">
-                  <h5>Standards</h5>
-                  <ul>
-                    <li><a href="#benchmarks">Audited Benchmarks</a></li>
-                    <li><a href="#cases">Case Studies</a></li>
-                    <li><a href="#consultation">Architecture Review</a></li>
-                  </ul>
-                </div>
-
-                <div className="footer-col">
-                  <h5>Compliance</h5>
-                  <ul>
-                    <li><span>SOC 2 Type II Certified</span></li>
-                    <li><span>ISO 27001 Hardened</span></li>
-                    <li><span>PCI-DSS Level 1 Ready</span></li>
-                    <li><span>HIPAA Security Posture</span></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="footer-bottom-row">
-                <div>© 2026 CloudSpecialist AI. All rights reserved. Enterprise engineering standards.</div>
-                <div style={{ display: 'flex', gap: '24px' }}>
-                  <a href="#">Security Baseline</a>
-                  <a href="#">Privacy Policy</a>
-                  <a href="#">Terms of Engagement</a>
+                  </a>
                 </div>
               </div>
             </div>
