@@ -1,0 +1,10 @@
+.git
+.wrangler
+node_modules
+src
+del-index.html
+index_v1.html
+package.json
+vite.config.js
+wrangler.toml
+.gitignore

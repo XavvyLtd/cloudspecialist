@@ -4,3 +4,4 @@ dist/
 *.log
 del-index.html
 index_v1.html
+.wrangler/
