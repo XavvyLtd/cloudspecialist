@@ -59,7 +59,9 @@
       var body =
         'Name: ' + name + '\n' +
         'Work Email: ' + (data.get('email') || '') + '\n' +
-        'Primary Environment: ' + (data.get('environment') || '') + '\n\n' +
+        (data.get('company') ? 'Company: ' + data.get('company') + '\n' : '') +
+        'Primary Environment: ' + (data.get('environment') || '') + '\n' +
+        (data.get('timeline') ? 'Timeline: ' + data.get('timeline') + '\n' : '') + '\n' +
         'What we are trying to solve:\n' + (data.get('context') || '');
       var mailto = 'mailto:hello@cloudspecialist.work' +
         '?subject=' + encodeURIComponent('Architecture Conversation with ' + name) +
