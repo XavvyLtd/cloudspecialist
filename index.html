@@ -1,0 +1,2310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+  <title>CloudSpecialist AI | Enterprise Cloud Engineering & AI Infrastructure</title>
+  
+  <!-- SEO & Open Graph -->
+  <meta content="CloudSpecialist AI engineers production-grade Kubernetes platforms, autonomous FinOps cost governance, and high-throughput AI infrastructure backed by verified industry benchmarks." name="description"/>
+  <meta content="Cloud Engineering, Kubernetes, DevSecOps, FinOps, AI Infrastructure, Cloud Migration, AWS, Azure, GCP, Platform Engineering, LLM Inference" name="keywords"/>
+  <meta content="CloudSpecialist AI" name="author"/>
+  <meta content="index, follow" name="robots"/>
+  <link href="https://www.cloudspecialist.work/" rel="canonical"/>
+
+  <meta content="website" property="og:type"/>
+  <meta content="CloudSpecialist AI | Enterprise Cloud Engineering & AI Infrastructure" property="og:title"/>
+  <meta content="Production-scale Kubernetes, AI-native infrastructure, DevSecOps automation, and FinOps cost recovery." property="og:description"/>
+  <meta content="https://www.cloudspecialist.work/" property="og:url"/>
+  <meta content="CloudSpecialist AI" property="og:site_name"/>
+  <meta content="https://www.cloudspecialist.work/logo.png" property="og:image"/>
+  
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="CloudSpecialist AI | Enterprise Cloud Engineering" name="twitter:title"/>
+  <meta content="Enterprise-grade cloud engineering, Kubernetes, FinOps governance, and scalable AI infrastructure." name="twitter:description"/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png"/>
+  <link rel="apple-touch-icon" href="logo.png"/>
+  <meta content="#05070d" name="theme-color"/>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+
+  <!-- React 18 & Babel Standalone for Seamless Component Execution -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.26.4/babel.min.js"></script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "CloudSpecialist AI",
+    "url": "https://www.cloudspecialist.work",
+    "logo": "https://www.cloudspecialist.work/logo.png",
+    "description": "Enterprise cloud engineering, Kubernetes orchestration, FinOps cost governance, and AI infrastructure specialists.",
+    "email": "hello@cloudspecialist.work",
+    "areaServed": "Global",
+    "serviceType": [
+      "Enterprise Cloud Architecture",
+      "Kubernetes & Platform Engineering",
+      "AI & GPU Infrastructure Optimization",
+      "FinOps & Cloud Cost Optimization",
+      "DevSecOps & Zero-Trust Security",
+      "Multi-Cloud Migration"
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       ENTERPRISE DESIGN SYSTEM: TOKENS & CSS VARIABLES
+       ========================================================================== */
+    :root {
+      --bg-base: #05070d;
+      --bg-surface-1: #0b1120;
+      --bg-surface-2: #111a30;
+      --bg-glass: rgba(15, 23, 42, 0.72);
+      --bg-glass-hover: rgba(30, 41, 59, 0.85);
+      
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-medium: rgba(255, 255, 255, 0.16);
+      --border-glow-cyan: rgba(6, 182, 212, 0.4);
+      --border-glow-blue: rgba(59, 130, 246, 0.4);
+      
+      --text-main: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --cyan-400: #22d3ee;
+      --cyan-500: #06b6d4;
+      --blue-500: #3b82f6;
+      --blue-600: #2563eb;
+      --indigo-500: #6366f1;
+      --emerald-400: #34d399;
+      --emerald-500: #10b981;
+      --amber-400: #fbbf24;
+      --amber-500: #f59e0b;
+      --rose-500: #f43f5e;
+      
+      --grad-cyan-blue: linear-gradient(135deg, #38bdf8 0%, #2563eb 50%, #6366f1 100%);
+      --grad-emerald-cyan: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+      --grad-amber-rose: linear-gradient(135deg, #f59e0b 0%, #f43f5e 100%);
+      --grad-card-dark: linear-gradient(180deg, rgba(17, 26, 48, 0.75) 0%, rgba(9, 14, 28, 0.9) 100%);
+      
+      --glow-blue: 0 0 45px rgba(37, 99, 235, 0.28);
+      --glow-cyan: 0 0 45px rgba(6, 182, 212, 0.32);
+      
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-xl: 30px;
+      --radius-full: 9999px;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      color-scheme: dark;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    #neural-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.65;
+    }
+
+    .app-root {
+      position: relative;
+      z-index: 1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    ::selection {
+      background: rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #060911;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .gradient-text {
+      background: var(--grad-cyan-blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .gradient-emerald {
+      background: var(--grad-emerald-cyan);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto 60px auto;
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      color: #38bdf8;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--cyan-400);
+      box-shadow: 0 0 10px var(--cyan-400);
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(0.8); }
+    }
+
+    .section-title {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .section-desc {
+      font-size: 18px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .btn-primary {
+      padding: 12px 26px;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: var(--radius-full);
+      background: var(--grad-cyan-blue);
+      border: none;
+      color: #ffffff;
+      box-shadow: 0 4px 22px rgba(37, 99, 235, 0.45);
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(37, 99, 235, 0.65);
+    }
+
+    .btn-secondary {
+      padding: 10px 20px;
+      font-size: 13.5px;
+      font-weight: 600;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-main);
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(56, 189, 248, 0.4);
+      transform: translateY(-1px);
+    }
+
+    /* Topbar Navigation */
+    .topbar {
+      position: fixed;
+      top: 16px;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 0 20px;
+    }
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      background: rgba(8, 14, 28, 0.82);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-full);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo-img {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 18px rgba(37, 99, 235, 0.4);
+    }
+
+    .brand-title {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand-title span {
+      background: var(--grad-cyan-blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: #ffffff;
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--grad-cyan-blue);
+      border-radius: 2px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 175px 0 90px 0;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(42px, 5.2vw, 70px);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      margin-bottom: 24px;
+    }
+
+    .hero-subtitle {
+      font-size: 19px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: 38px;
+      max-width: 620px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .hero-stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .hero-stat-item strong {
+      display: block;
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: var(--grad-cyan-blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: var(--font-mono);
+    }
+
+    .hero-stat-item span {
+      font-size: 13px;
+      color: var(--text-dim);
+      line-height: 1.4;
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* Command Center Card */
+    .command-center-card {
+      background: var(--grad-card-dark);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6), var(--glow-blue);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .command-center-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--grad-cyan-blue);
+    }
+
+    .cc-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .window-controls {
+      display: flex;
+      gap: 6px;
+    }
+    .window-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+    }
+    .window-dot.red { background: #ef4444; }
+    .window-dot.yellow { background: #f59e0b; }
+    .window-dot.green { background: #10b981; }
+
+    .live-status-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11.5px;
+      font-family: var(--font-mono);
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+    }
+
+    .live-indicator {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      animation: pulseGlow 1.5s infinite;
+    }
+
+    .cc-nodes {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .cc-node-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 13px 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-md);
+      font-size: 13px;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .cc-node-row:hover, .cc-node-row.active {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(56, 189, 248, 0.4);
+      transform: translateX(4px);
+    }
+
+    .cc-node-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cc-node-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(37, 99, 235, 0.18);
+      color: var(--cyan-400);
+    }
+
+    .cc-node-badge {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--cyan-400);
+      font-weight: 700;
+    }
+
+    .terminal-box {
+      background: #03060f;
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #94a3b8;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      line-height: 1.65;
+    }
+    .terminal-box .prompt { color: #38bdf8; }
+    .terminal-box .success { color: #34d399; }
+    .terminal-box .cyan { color: #22d3ee; }
+
+    /* Trust Section */
+    .trust-section {
+      padding: 36px 0 80px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .trust-label {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 28px;
+    }
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 32px 52px;
+    }
+    .trust-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-secondary);
+      font-size: 14.5px;
+      font-weight: 600;
+      opacity: 0.85;
+      transition: all 0.25s ease;
+    }
+    .trust-badge-item:hover {
+      opacity: 1;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+    .trust-badge-item svg {
+      width: 24px;
+      height: 24px;
+      color: var(--cyan-400);
+    }
+
+    /* Benchmarks Section */
+    .benchmarks-section {
+      padding: 110px 0;
+      position: relative;
+    }
+    .benchmarks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    .benchmark-card {
+      background: var(--grad-card-dark);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 36px 30px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .benchmark-card:hover {
+      border-color: rgba(56, 189, 248, 0.45);
+      transform: translateY(-5px);
+      box-shadow: var(--glow-blue);
+    }
+    .benchmark-metric-big {
+      font-size: 54px;
+      font-weight: 900;
+      font-family: var(--font-mono);
+      line-height: 1;
+      margin-bottom: 14px;
+      background: var(--grad-cyan-blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .benchmark-title {
+      font-size: 21px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+    .benchmark-desc {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+    .benchmark-recovery-pill {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: rgba(0, 0, 0, 0.45);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .benchmark-recovery-pill strong {
+      color: var(--cyan-400);
+      font-family: var(--font-mono);
+    }
+
+    /* Capabilities Matrix */
+    .capabilities-section {
+      padding: 110px 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(11, 17, 32, 0.5) 50%, transparent 100%);
+    }
+    .tab-pills-nav {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+    }
+    .tab-pill-btn {
+      padding: 13px 26px;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-secondary);
+      font-size: 14.5px;
+      font-weight: 700;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .tab-pill-btn:hover {
+      background: rgba(255, 255, 255, 0.09);
+      color: #ffffff;
+    }
+    .tab-pill-btn.active {
+      background: rgba(37, 99, 235, 0.25);
+      border-color: #38bdf8;
+      color: #ffffff;
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+    }
+    .capability-pane {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 48px;
+      align-items: center;
+      animation: tabFadeIn 0.35s ease;
+    }
+    @keyframes tabFadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .cap-features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 24px 0 36px 0;
+    }
+    .cap-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 15px;
+      color: #e2e8f0;
+    }
+    .cap-check-badge {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.18);
+      color: #34d399;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .cap-card-visual {
+      background: #080c18;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+    }
+    .telemetry-grid-2x2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 22px;
+    }
+    .telemetry-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 18px;
+      border-radius: var(--radius-md);
+    }
+    .telemetry-box strong {
+      display: block;
+      font-size: 26px;
+      color: var(--cyan-400);
+      font-family: var(--font-mono);
+      margin-bottom: 4px;
+    }
+    .telemetry-box span {
+      font-size: 12.5px;
+      color: var(--text-dim);
+    }
+
+    /* Calculator Section */
+    .calculator-section {
+      padding: 110px 0;
+      position: relative;
+    }
+    .calc-card-container {
+      background: var(--grad-card-dark);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: var(--radius-xl);
+      padding: 52px;
+      box-shadow: 0 35px 80px rgba(0, 0, 0, 0.7), var(--glow-cyan);
+    }
+    .calc-layout-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .calc-slider-wrapper {
+      margin: 32px 0;
+    }
+    .calc-slider-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .calc-spend-num {
+      font-size: 24px;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      color: #38bdf8;
+    }
+    .range-input {
+      width: 100%;
+      height: 10px;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.12);
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .range-input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--cyan-400);
+      box-shadow: 0 0 20px var(--cyan-400);
+      cursor: pointer;
+      border: 3px solid #090e1a;
+    }
+    .workload-pills {
+      display: flex;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .workload-pill {
+      flex: 1;
+      padding: 12px;
+      text-align: center;
+      font-size: 13.5px;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .workload-pill.active {
+      background: rgba(37, 99, 235, 0.25);
+      border-color: #38bdf8;
+      color: #ffffff;
+    }
+    .calc-result-panel {
+      background: #060913;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+    }
+    .result-hero-stat {
+      text-align: center;
+      padding-bottom: 26px;
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 26px;
+    }
+    .result-hero-stat .stat-num {
+      font-size: 56px;
+      font-weight: 900;
+      font-family: var(--font-mono);
+      background: linear-gradient(90deg, #34d399, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+    }
+    .breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      font-size: 14.5px;
+      color: var(--text-secondary);
+    }
+    .breakdown-row strong {
+      color: #ffffff;
+      font-family: var(--font-mono);
+    }
+
+    /* Blueprints Section */
+    .blueprints-section {
+      padding: 110px 0;
+    }
+    .blueprints-wrapper {
+      background: #080c16;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+    }
+    .bp-tabs-nav {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .bp-tab-btn {
+      padding: 11px 22px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .bp-tab-btn.active {
+      background: rgba(56, 189, 248, 0.16);
+      border-color: #38bdf8;
+      color: #ffffff;
+    }
+    .bp-diagram-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    .bp-column {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px dashed rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      text-align: center;
+    }
+    .bp-col-title {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cyan-400);
+      margin-bottom: 16px;
+    }
+    .bp-node-pill {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-sm);
+      padding: 13px;
+      margin-bottom: 12px;
+      font-size: 13.5px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    .bp-node-pill:hover {
+      border-color: #38bdf8;
+      transform: translateY(-2px);
+    }
+
+    /* Case Studies */
+    .case-studies-section {
+      padding: 110px 0;
+    }
+    .case-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .case-card-item {
+      background: var(--grad-card-dark);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+    .case-card-item:hover {
+      border-color: rgba(56, 189, 248, 0.45);
+      transform: translateY(-5px);
+      box-shadow: var(--glow-blue);
+    }
+    .case-tag-industry {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cyan-400);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .case-metric-box-adv {
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+    .metric-big-highlight {
+      font-size: 32px;
+      font-weight: 900;
+      font-family: var(--font-mono);
+      color: #34d399;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* Discovery Section */
+    .discovery-section {
+      padding: 110px 0 150px 0;
+      position: relative;
+    }
+    .discovery-card-wrapper {
+      background: var(--grad-card-dark);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: var(--radius-xl);
+      padding: 60px;
+      box-shadow: 0 35px 90px rgba(0, 0, 0, 0.75), var(--glow-blue);
+    }
+    .discovery-layout-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+    .perks-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 30px;
+    }
+    .perk-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 15px;
+      color: #e2e8f0;
+    }
+    .perk-row svg {
+      width: 20px;
+      height: 20px;
+      color: var(--cyan-400);
+      flex-shrink: 0;
+    }
+    .discovery-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .form-row-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .form-group-item label {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+    .input-field, .select-field, .textarea-field {
+      width: 100%;
+      padding: 15px 20px;
+      background: #050812;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 14.5px;
+      transition: all 0.25s ease;
+    }
+    .input-field:focus, .select-field:focus, .textarea-field:focus {
+      outline: none;
+      border-color: #38bdf8;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+    }
+    .textarea-field {
+      min-height: 115px;
+      resize: vertical;
+    }
+    .btn-submit-wizard {
+      padding: 17px;
+      font-size: 15.5px;
+      font-weight: 800;
+      border-radius: var(--radius-md);
+      background: var(--grad-cyan-blue);
+      border: none;
+      color: #ffffff;
+      box-shadow: 0 6px 25px rgba(37, 99, 235, 0.45);
+      transition: all 0.25s ease;
+      margin-top: 10px;
+    }
+    .btn-submit-wizard:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 35px rgba(37, 99, 235, 0.7);
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 85px 0 45px 0;
+      background: #03050a;
+      font-size: 14px;
+      color: var(--text-dim);
+    }
+    .footer-grid-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 52px;
+      margin-bottom: 60px;
+    }
+    .footer-col-item h4 {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+    .footer-links-list a:hover {
+      color: #ffffff;
+    }
+    .footer-bottom-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 34px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 13px;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid, .capability-pane, .calc-layout-grid, .discovery-layout-grid {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+      .benchmarks-grid, .case-cards-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .footer-grid-layout {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-actions .btn-secondary {
+        display: none;
+      }
+      .benchmarks-grid, .case-cards-grid, .hero-stats-row, .form-row-2col, .bp-diagram-columns {
+        grid-template-columns: 1fr;
+      }
+      .hero-section {
+        padding: 135px 0 60px 0;
+      }
+      .discovery-card-wrapper, .calc-card-container {
+        padding: 30px;
+      }
+      .footer-grid-layout {
+        grid-template-columns: 1fr;
+      }
+      .footer-bottom-bar {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Neural Constellation Canvas -->
+  <canvas id="neural-canvas"></canvas>
+
+  <div id="root" class="app-root"></div>
+
+  <!-- ==========================================================================
+       REACT 18 APPLICATION COMPONENT TREE
+       ========================================================================== -->
+  <script type="text/babel">
+    const { useState, useEffect, useMemo, useRef } = React;
+
+    // --------------------------------------------------------------------------
+    // 1. Navigation Bar Component
+    // --------------------------------------------------------------------------
+    function Navbar() {
+      const [activeSection, setActiveSection] = useState('home');
+
+      useEffect(() => {
+        const handleScroll = () => {
+          const sections = document.querySelectorAll('section[id]');
+          let current = 'home';
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop - 140;
+            if (window.pageYOffset >= sectionTop) {
+              current = section.getAttribute('id');
+            }
+          });
+          setActiveSection(current);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+      }, []);
+
+      return (
+        <header className="topbar">
+          <nav className="nav-container">
+            <a href="#" className="brand">
+              <img src="logo.png" alt="CloudSpecialist AI Logo" className="brand-logo-img"/>
+              <div className="brand-title">CLOUDSPECIALIST <span>AI</span></div>
+            </a>
+
+            <ul className="nav-links">
+              <li><a href="#capabilities" className={`nav-link ${activeSection === 'capabilities' ? 'active' : ''}`}>Capabilities</a></li>
+              <li><a href="#benchmarks" className={`nav-link ${activeSection === 'benchmarks' ? 'active' : ''}`}>Benchmarks</a></li>
+              <li><a href="#calculator" className={`nav-link ${activeSection === 'calculator' ? 'active' : ''}`}>FinOps ROI</a></li>
+              <li><a href="#blueprints" className={`nav-link ${activeSection === 'blueprints' ? 'active' : ''}`}>Architecture</a></li>
+              <li><a href="#cases" className={`nav-link ${activeSection === 'cases' ? 'active' : ''}`}>Case Studies</a></li>
+            </ul>
+
+            <div className="nav-actions">
+              <a href="#calculator" className="btn-secondary">ROI Calculator</a>
+              <a href="#discovery" className="btn-primary">
+                <span>Scope Project</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </nav>
+        </header>
+      );
+    }
+
+    // --------------------------------------------------------------------------
+    // 2. Hero Section & Interactive NOC/SOC Command Center
+    // --------------------------------------------------------------------------
+    function Hero() {
+      const [activeNode, setActiveNode] = useState('k8s');
+
+      const terminalLogs = {
+        'k8s': (
+          <div>
+            <div><span className="prompt">cs-ai@platform:~$</span> kubectl get hpa -n ai-production</div>
+            <div>NAME: vllm-cluster | TARGETS: 44%/80% | REPLICAS: 16 | LATENCY: 11.4ms</div>
+            <div><span className="prompt">cs-ai@platform:~$</span> terraform plan -target=module.enterprise_k8s</div>
+            <div className="success">✔ Infrastructure state synchronized. 0 drift detected.</div>
+          </div>
+        ),
+        'gpu': (
+          <div>
+            <div><span className="prompt">cs-ai@gpu-node:~$</span> nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv</div>
+            <div>utilization.gpu [%], memory.used [MiB]</div>
+            <div className="cyan">92 %, 76240 MiB / 81920 MiB [H100 MIG Active]</div>
+            <div><span className="prompt">cs-ai@gpu-node:~$</span> vllm serve --model meta-llama/Llama-3.3-70B-Instruct</div>
+            <div className="success">INFO: High-Throughput Engine Loaded. P99 Latency: 12.8ms.</div>
+          </div>
+        ),
+        'finops': (
+          <div>
+            <div><span className="prompt">cs-ai@finops:~$</span> kubecost audit --window=30d --aggregate=namespace</div>
+            <div>AI-Inference: $18,400 (Spot savings: 68%)</div>
+            <div>Microservices: $14,200 (Rightsized: 34%)</div>
+            <div className="success">✔ Monthly FinOps Total Recovery: -$22,400/mo.</div>
+          </div>
+        )
+      };
+
+      return (
+        <section className="hero-section" id="home">
+          <div className="container">
+            <div className="hero-grid">
+              
+              <div className="hero-content">
+                <div className="section-badge">
+                  <span className="pulse-dot"></span>
+                  Enterprise Cloud & AI Platform Engineering
+                </div>
+
+                <h1>
+                  Resilient Cloud Ecosystems.<br/>
+                  <span className="gradient-text">Engineered for Production AI.</span>
+                </h1>
+
+                <p className="hero-subtitle">
+                  CloudSpecialist AI designs, migrates, and automates mission-critical Kubernetes architectures, autonomous FinOps governance, and high-throughput AI inference pipelines for enterprises scaling globally.
+                </p>
+
+                <div className="hero-ctas">
+                  <a href="#discovery" className="btn-primary" style={{ padding: '15px 34px', fontSize: '15.5px' }}>
+                    <span>Scope Your Architecture</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                  <a href="#benchmarks" className="btn-secondary" style={{ padding: '15px 30px', fontSize: '15.5px' }}>
+                    <span>Explore Sourced Data</span>
+                  </a>
+                </div>
+
+                <div className="hero-stats-row">
+                  <div className="hero-stat-item">
+                    <strong>99.999%</strong>
+                    <span>Enterprise SLA uptime & multi-region DR</span>
+                  </div>
+                  <div className="hero-stat-item">
+                    <strong>41.8%</strong>
+                    <span>Average audited cloud spend reduction</span>
+                  </div>
+                  <div className="hero-stat-item">
+                    <strong>&lt; 15ms</strong>
+                    <span>P99 AI inference latency on optimized clusters</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Command Center Card */}
+              <div className="command-center-card">
+                <div className="cc-header">
+                  <div className="window-controls">
+                    <div className="window-dot red"></div>
+                    <div className="window-dot yellow"></div>
+                    <div className="window-dot green"></div>
+                  </div>
+                  <div className="live-status-pill">
+                    <span className="live-indicator"></span>
+                    SYSTEM HEALTH: 100% OPERATIONAL
+                  </div>
+                </div>
+
+                <div className="cc-nodes">
+                  <div 
+                    className={`cc-node-row ${activeNode === 'k8s' ? 'active' : ''}`}
+                    onClick={() => setActiveNode('k8s')}
+                  >
+                    <div className="cc-node-left">
+                      <div className="cc-node-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                      </div>
+                      <div>
+                        <strong>EKS/AKS Multi-Region Control Plane</strong>
+                        <div style={{ fontSize: '11.5px', color: 'var(--text-dim)' }}>Kubernetes v1.31 • eBPF Mesh</div>
+                      </div>
+                    </div>
+                    <span className="cc-node-badge">ACTIVE / 48 NODES</span>
+                  </div>
+
+                  <div 
+                    className={`cc-node-row ${activeNode === 'gpu' ? 'active' : ''}`}
+                    onClick={() => setActiveNode('gpu')}
+                  >
+                    <div className="cc-node-left">
+                      <div className="cc-node-icon" style={{ background: 'rgba(99, 102, 241, 0.2)', color: '#818cf8' }}>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                      </div>
+                      <div>
+                        <strong>Distributed AI/vLLM Inference Pool</strong>
+                        <div style={{ fontSize: '11.5px', color: 'var(--text-dim)' }}>H100/A100 TensorRT Auto-Scaling</div>
+                      </div>
+                    </div>
+                    <span className="cc-node-badge" style={{ color: '#818cf8' }}>2,450 REQ/SEC</span>
+                  </div>
+
+                  <div 
+                    className={`cc-node-row ${activeNode === 'finops' ? 'active' : ''}`}
+                    onClick={() => setActiveNode('finops')}
+                  >
+                    <div className="cc-node-left">
+                      <div className="cc-node-icon" style={{ background: 'rgba(16, 185, 129, 0.2)', color: '#34d399' }}>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                      </div>
+                      <div>
+                        <strong>Autonomous FinOps Engine</strong>
+                        <div style={{ fontSize: '11.5px', color: 'var(--text-dim)' }}>Karpenter Right-Sizing • Spot Fleet</div>
+                      </div>
+                    </div>
+                    <span className="cc-node-badge" style={{ color: '#34d399' }}>-$22,400/MO RECLAIMED</span>
+                  </div>
+                </div>
+
+                <div className="terminal-box">
+                  {terminalLogs[activeNode]}
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // --------------------------------------------------------------------------
+    // 3. Trust Bar Component
+    // --------------------------------------------------------------------------
+    function TrustBar() {
+      return (
+        <section className="trust-section">
+          <div className="container">
+            <div className="trust-label">Aligned with Global Enterprise Cloud Standards</div>
+            <div className="trust-badges">
+              <div className="trust-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>SOC 2 Type II Certified</span>
+              </div>
+              <div className="trust-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                <span>ISO 27001 Posture</span>
+              </div>
+              <div className="trust-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                <span>AWS Advanced Tier Partner</span>
+              </div>
+              <div className="trust-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                <span>Microsoft Azure Gold Competency</span>
+              </div>
+              <div className="trust-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polygon points="2 17 12 22 22 17"/><polygon points="2 12 12 17 22 12"/></svg>
+                <span>CNCF Kubernetes Certified</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // --------------------------------------------------------------------------
+    // 4. Benchmarks & Industry Data Component
+    // --------------------------------------------------------------------------
+    function Benchmarks() {
+      return (
+        <section className="benchmarks-section" id="benchmarks">
+          <div className="container">
+            <div className="section-header">
+              <div className="section-badge">Verified Benchmark Data</div>
+              <h2 className="section-title">The Engineering Data Behind Cloud ROI</h2>
+              <p className="section-desc">
+                Unoptimized cloud infrastructure silently erodes enterprise EBITDA. We leverage automated platform engineering and empirical telemetry to unlock massive structural savings and sub-second scale.
+              </p>
+            </div>
+
+            <div className="benchmarks-grid">
+              <div className="benchmark-card">
+                <div>
+                  <div className="benchmark-metric-big">32%</div>
+                  <h3 className="benchmark-title">Unused Cloud Spend</h3>
+                  <p className="benchmark-desc">
+                    According to the Flexera 2025 State of the Cloud Report, over 32% of enterprise cloud compute is wasted on idle over-provisioning and orphaned resources.
+                  </p>
+                </div>
+                <div className="benchmark-recovery-pill">
+                  <span>CloudSpecialist FinOps Recovery:</span>
+                  <strong>35% - 48%</strong>
+                </div>
+              </div>
+
+              <div className="benchmark-card">
+                <div>
+                  <div className="benchmark-metric-big">208x</div>
+                  <h3 className="benchmark-title">Deployment Velocity</h3>
+                  <p className="benchmark-desc">
+                    DORA State of DevOps research demonstrates elite GitOps teams deploy 208 times more frequently with 7x lower change failure rates through automated DevSecOps pipelines.
+                  </p>
+                </div>
+                <div className="benchmark-recovery-pill">
+                  <span>Mean Time to Recovery (MTTR):</span>
+                  <strong>&lt; 6 Minutes</strong>
+                </div>
+              </div>
+
+              <div className="benchmark-card">
+                <div>
+                  <div className="benchmark-metric-big">80%+</div>
+                  <h3 className="benchmark-title">AI Workload Bottlenecks</h3>
+                  <p className="benchmark-desc">
+                    Stanford AI Index and Gartner research highlight that 80%+ of enterprise AI models suffer from GPU memory starvation and latency spikes without dedicated orchestrators.
+                  </p>
+                </div>
+                <div className="benchmark-recovery-pill">
+                  <span>GPU Utilization Rate:</span>
+                  <strong>88% - 94% Peak</strong>
+                </div>
+              </div>
+            </div>
+
+            <div style={{ textAlign: 'center', fontSize: '12.5px', color: 'var(--text-dim)', fontFamily: 'var(--font-mono)' }}>
+              Sources: Flexera 2025 State of the Cloud • DORA DevOps Benchmark • Gartner AI Infrastructure Forecast
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // --------------------------------------------------------------------------
+    // 5. Capabilities Matrix Component
+    // --------------------------------------------------------------------------
+    function Capabilities() {
+      const [activeTab, setActiveTab] = useState('k8s');
+
+      const tabsData = {
+        'k8s': {
+          title: 'Production-Grade Kubernetes & Service Mesh',
+          desc: 'Build, harden, and manage scalable EKS, AKS, and GKE clusters. We implement Karpenter dynamic autoscaling, Cilium eBPF networking, and Istio service mesh for ultra-resilient distributed microservices.',
+          features: [
+            { label: 'Multi-Region Active-Active:', text: 'Sub-second global failover with Route53/Traffic Manager.' },
+            { label: 'GitOps Infrastructure:', text: 'Declarative ArgoCD / Flux synchronisation with zero drift.' },
+            { label: 'eBPF Observability:', text: 'Deep kernel-level telemetry without sidecar resource overhead.' }
+          ],
+          visualTitle: 'EKS Core Control Plane (v1.31)',
+          visualColor: '#38bdf8',
+          metrics: [
+            { num: '99.999%', label: 'Uptime SLA' },
+            { num: '< 300ms', label: 'DR Failover RTO' },
+            { num: '14,000+', label: 'Pods Orchestrated' },
+            { num: '0-Drift', label: 'ArgoCD GitOps' }
+          ]
+        },
+        'ai': {
+          title: 'Scalable AI Inference & High-Throughput Pipelines',
+          desc: 'Eliminate GPU starvation and inference latency. We engineer containerized model serving with vLLM, TensorRT-LLM, Ray clusters, and Triton Inference Server on dedicated GPU spot fleets.',
+          features: [
+            { label: 'Optimized TensorRT Execution:', text: '3.4x throughput increase over vanilla PyTorch serving.' },
+            { label: 'Dynamic GPU Slicing (MIG):', text: 'Partition A100/H100 GPUs for multi-tenant efficiency.' },
+            { label: 'Vector Database Scaling:', text: 'Low-latency Milvus, Qdrant, and Pinecone integrations.' }
+          ],
+          visualTitle: 'Ray & vLLM Distributed Serving',
+          visualColor: '#818cf8',
+          metrics: [
+            { num: '12.8ms', label: 'P95 First-Token Latency' },
+            { num: '64%', label: 'GPU Cost Cut' },
+            { num: '4.8x', label: 'Concurrency Boost' },
+            { num: 'Auto', label: 'Spot-Fleet Failover' }
+          ]
+        },
+        'finops': {
+          title: 'Continuous Cloud Cost Governance & FinOps',
+          desc: 'Stop burning budget on unallocated cloud capacity. Our FinOps frameworks automate rightsizing, Commitment Discount management, and unit economics tracking directly in your engineering sprints.',
+          features: [
+            { label: 'Automated Karpenter Spot Provisioning:', text: '60%+ savings on batch & test clusters.' },
+            { label: 'Savings Plan & RI Arbitrage:', text: 'Maximize discount coverage without long-term risk.' },
+            { label: 'Cost per Tenant Telemetry:', text: 'Real-time unit metrics for finance and leadership.' }
+          ],
+          visualTitle: 'Automated FinOps Policy Engine',
+          visualColor: '#34d399',
+          metrics: [
+            { num: '41.8%', label: 'Avg. Verified Savings' },
+            { num: '$480k+', label: 'Annual Reclaimed Spend' },
+            { num: '94%', label: 'Discount Coverage' },
+            { num: '30 Days', label: 'Time-to-Value' }
+          ]
+        },
+        'sec': {
+          title: 'Zero-Trust Security & Hardened Delivery Pipelines',
+          desc: 'Embed compliance and security guardrails directly into Terraform and GitHub Actions. Automated vulnerability scanning, secrets rotation, and posture management for SOC2, HIPAA, and PCI-DSS.',
+          features: [
+            { label: 'Supply Chain Security:', text: 'Signed container images, SBOM generation, and Cosign verification.' },
+            { label: 'Automated Identity & OIDC:', text: 'Eliminates long-lived static cloud credentials.' },
+            { label: 'GuardDuty & CloudTrail SIEM:', text: 'Automated anomaly isolation within seconds.' }
+          ],
+          visualTitle: 'Zero-Trust Cloud Posture',
+          visualColor: '#fbbf24',
+          metrics: [
+            { num: '100%', label: 'SOC2 / ISO Guardrails' },
+            { num: '0', label: 'Static Secret Leaks' },
+            { num: 'Real-Time', label: 'Drift Remediation' },
+            { num: 'eBPF', label: 'Threat Isolation' }
+          ]
+        }
+      };
+
+      const cur = tabsData[activeTab];
+
+      return (
+        <section className="capabilities-section" id="capabilities">
+          <div className="container">
+            <div className="section-header">
+              <div className="section-badge">Platform Engineering</div>
+              <h2 className="section-title">End-to-End Enterprise Cloud Capabilities</h2>
+              <p className="section-desc">
+                Modular engineering services engineered for high availability, compliance, and multi-cloud resilience.
+              </p>
+            </div>
+
+            <div className="tab-pills-nav">
+              <button className={`tab-pill-btn ${activeTab === 'k8s' ? 'active' : ''}`} onClick={() => setActiveTab('k8s')}>
+                Kubernetes & Platform
+              </button>
+              <button className={`tab-pill-btn ${activeTab === 'ai' ? 'active' : ''}`} onClick={() => setActiveTab('ai')}>
+                AI & GPU Infrastructure
+              </button>
+              <button className={`tab-pill-btn ${activeTab === 'finops' ? 'active' : ''}`} onClick={() => setActiveTab('finops')}>
+                Autonomous FinOps
+              </button>
+              <button className={`tab-pill-btn ${activeTab === 'sec' ? 'active' : ''}`} onClick={() => setActiveTab('sec')}>
+                Zero-Trust DevSecOps
+              </button>
+            </div>
+
+            <div className="capability-pane" key={activeTab}>
+              <div className="cap-text-block">
+                <h3 style={{ fontSize: '32px', fontWeight: 800, marginBottom: '16px' }}>{cur.title}</h3>
+                <p style={{ fontSize: '16.5px', color: 'var(--text-secondary)', lineHeight: 1.7 }}>{cur.desc}</p>
+                <ul className="cap-features-list">
+                  {cur.features.map((f, i) => (
+                    <li className="cap-feature-item" key={i}>
+                      <span className="cap-check-badge">✓</span>
+                      <span><strong>{f.label}</strong> {f.text}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href="#discovery" className="btn-primary">Consult a Principal Architect</a>
+              </div>
+
+              <div className="cap-card-visual">
+                <div className="bp-node-pill" style={{ borderColor: cur.visualColor, color: cur.visualColor }}>
+                  {cur.visualTitle}
+                </div>
+                <div className="telemetry-grid-2x2">
+                  {cur.metrics.map((m, i) => (
+                    <div className="telemetry-box" key={i}>
+                      <strong>{m.num}</strong>
+                      <span>{m.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      );
+    }
+
+    // --------------------------------------------------------------------------
+    // 6. Interactive FinOps ROI Calculator Component
+    // --------------------------------------------------------------------------
+    function FinOpsCalculator() {
+      const [spend, setSpend] = useState(60000);
+      const [workload, setWorkload] = useState('k8s');
+
+      const calculations = useMemo(() => {
+        const multiplier = workload === 'ai' ? 0.46 : workload === 'k8s' ? 0.418 : 0.38;
+        const annual = Math.round(spend * 12 * multiplier);
+        const idle = Math.round(spend * 0.17);
+        const spot = Math.round(spend * (multiplier - 0.17));
+        const hours = Math.round((spend / 1000) * 12.8);
+        return { annual, idle, spot, hours, percent: (multiplier * 100).toFixed(1) };
+      }, [spend, workload]);
+
+      return (
+        <section className="calculator-section" id="calculator">
+          <div className="container">
+            <div className="calc-card-container">
+              <div className="calc-layout-grid">
+                
+                <div>
+                  <div className="section-badge">Interactive Tool</div>
+                  <h2 style={{ fontSize: '32px', fontWeight: 800, marginBottom: '12px' }}>Estimate Your Cloud Savings</h2>
+                  <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', fontSize: '15.5px' }}>
+                    Slide your monthly infrastructure spend to calculate guaranteed FinOps savings, waste elimination, and payback timeline based on historical client audits.
+                  </p>
+
+                  <div className="calc-slider-wrapper">
+                    <div className="calc-slider-header">
+                      <span style={{ fontSize: '14.5px', fontWeight: 700 }}>Monthly Cloud Spend:</span>
+                      <span className="calc-spend-num">${spend.toLocaleString()} / mo</span>
+                    </div>
+                    <input 
+                      type="range" 
+                      min="10000" 
+                      max="500000" 
+                      step="5000" 
+                      value={spend} 
+                      className="range-input" 
+                      onChange={(e) => setSpend(Number(e.target.value))}
+                    />
+                  </div>
+
+                  <div>
+                    <span style={{ fontSize: '14px', fontWeight: 700, color: 'var(--text-secondary)' }}>Primary Workload Profile:</span>
+                    <div className="workload-pills">
+                      <div 
+                        className={`workload-pill ${workload === 'k8s' ? 'active' : ''}`}
+                        onClick={() => setWorkload('k8s')}
+                      >
+                        Kubernetes / Microservices
+                      </div>
+                      <div 
+                        className={`workload-pill ${workload === 'ai' ? 'active' : ''}`}
+                        onClick={() => setWorkload('ai')}
+                      >
+                        AI / GenAI Training
+                      </div>
+                      <div 
+                        className={`workload-pill ${workload === 'multi' ? 'active' : ''}`}
+                        onClick={() => setWorkload('multi')}
+                      >
+                        Multi-Cloud Enterprise
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="calc-result-panel">
+                  <div className="result-hero-stat">
+                    <div className="stat-num">${calculations.annual.toLocaleString()}</div>
+                    <div style={{ fontSize: '14px', color: 'var(--text-muted)', marginTop: '6px' }}>
+                      Estimated Annual Cloud Savings ({calculations.percent}%)
+                    </div>
+                  </div>
+
+                  <div className="breakdown-row">
+                    <span>Idle Compute & Storage Reclaimed:</span>
+                    <strong>${calculations.idle.toLocaleString()} / mo</strong>
+                  </div>
+                  <div className="breakdown-row">
+                    <span>Spot & RI Arbitrage Optimization:</span>
+                    <strong>${calculations.spot.toLocaleString()} / mo</strong>
+                  </div>
+                  <div className="breakdown-row">
+                    <span>Engineering Hours Saved / Year:</span>
+                    <strong>{calculations.hours.toLocaleString()} hrs</strong>
+                  </div>
+                  <div className="breakdown-row">
+                    <span>Estimated Payback Horizon:</span>
+                    <strong style={{ color: '#34d399' }}>&lt; 38 Days</strong>
+                  </div>
+
+                  <div style={{ marginTop: '28px' }}>
+                    <a href="#discovery" className="btn-primary" style={{ width: '100%', justifyContent: 'center', padding: '15px' }}>
+                      <span>Claim Your Custom FinOps Roadmap</span>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // --------------------------------------------------------------------------
+    // 7. Architecture Blueprints Component
+    // --------------------------------------------------------------------------
+    function Blueprints() {
+      const [activeBp, setActiveBp] = useState('ai-cluster');
+
+      const blueprintsData = {
+        'ai-cluster': {
+          diagram: (
+            <div className="bp-diagram-columns">
+              <div className="bp-column">
+                <div className="bp-col-title">Ingress & Gateway Layer</div>
+                <div className="bp-node-pill">Cloudflare Enterprise Edge</div>
+                <div className="bp-node-pill">AWS Network Load Balancer</div>
+                <div className="bp-node-pill">Istio Envoy API Gateway</div>
+              </div>
+              <div className="bp-column">
+                <div className="bp-col-title">Compute & Orchestration</div>
+                <div className="bp-node-pill" style={{ borderColor: '#38bdf8', color: '#38bdf8' }}>vLLM H100 GPU Cluster (MIG)</div>
+                <div className="bp-node-pill">Karpenter Spot Autoscaler</div>
+                <div className="bp-node-pill">Ray Distributed Task Worker</div>
+              </div>
+              <div className="bp-column">
+                <div className="bp-col-title">Data & State Store</div>
+                <div className="bp-node-pill">Qdrant Vector DB (HNSW)</div>
+                <div className="bp-node-pill">Amazon S3 High-Perf Storage</div>
+                <div className="bp-node-pill">Redis Enterprise Cluster</div>
+              </div>
+            </div>
+          ),
+          code: (
+            <div>
+              <div><span className="prompt"># terraform/modules/ai_cluster/main.tf</span></div>
+              <div>resource "aws_eks_node_group" "gpu_inference" &#123;</div>
+              <div>&nbsp;&nbsp;cluster_name&nbsp;&nbsp;&nbsp;&nbsp;= module.eks.cluster_name</div>
+              <div>&nbsp;&nbsp;instance_types&nbsp;&nbsp;= ["g5.12xlarge", "p4d.24xlarge"]</div>
+              <div>&nbsp;&nbsp;scaling_config&nbsp;&nbsp;&#123; min_size = 2, max_size = 32, desired_size = 8 &#125;</div>
+              <div>&nbsp;&nbsp;capacity_type&nbsp;&nbsp;&nbsp;= "SPOT" <span className="success"># Automated 68% Cost Optimization</span></div>
+              <div>&#125;</div>
+            </div>
+          )
+        },
+        'k8s-mesh': {
+          diagram: (
+            <div className="bp-diagram-columns">
+              <div className="bp-column">
+                <div className="bp-col-title">Global DNS & WAF</div>
+                <div className="bp-node-pill">AWS Route53 Latency Routing</div>
+                <div className="bp-node-pill">Cloudflare Magic WAN</div>
+                <div className="bp-node-pill">Global Accelerator Failover</div>
+              </div>
+              <div className="bp-column">
+                <div className="bp-col-title">Multi-Region Kubernetes</div>
+                <div className="bp-node-pill" style={{ borderColor: '#34d399', color: '#34d399' }}>EKS us-east-1 (Primary Active)</div>
+                <div className="bp-node-pill" style={{ borderColor: '#34d399', color: '#34d399' }}>EKS eu-west-1 (Secondary Active)</div>
+                <div className="bp-node-pill">Cilium eBPF Cross-Mesh VPN</div>
+              </div>
+              <div className="bp-column">
+                <div className="bp-col-title">Distributed Database</div>
+                <div className="bp-node-pill">Aurora Global PostgreSQL</div>
+                <div className="bp-node-pill">Kafka Multi-Region MirrorMaker</div>
+                <div className="bp-node-pill">AWS KMS Multi-Region Keys</div>
+              </div>
+            </div>
+          ),
+          code: (
+            <div>
+              <div><span className="prompt"># terraform/modules/multi_region_mesh/main.tf</span></div>
+              <div>module "cilium_mesh" &#123;</div>
+              <div>&nbsp;&nbsp;source&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= "cilium/cilium/kubernetes"</div>
+              <div>&nbsp;&nbsp;cluster_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 1</div>
+              <div>&nbsp;&nbsp;mesh_service&nbsp;&nbsp;&nbsp;&nbsp;= true</div>
+              <div>&nbsp;&nbsp;encryption&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= "wireguard" <span className="success"># Zero-Trust WireGuard Tunneling</span></div>
+              <div>&#125;</div>
+            </div>
+          )
+        },
+        'zero-trust': {
+          diagram: (
+            <div className="bp-diagram-columns">
+              <div className="bp-column">
+                <div className="bp-col-title">CI/CD & Supply Chain</div>
+                <div className="bp-node-pill">GitHub Actions OIDC Trust</div>
+                <div className="bp-node-pill">Cosign Image Signature</div>
+                <div className="bp-node-pill">Trivy Vulnerability Gate</div>
+              </div>
+              <div className="bp-column">
+                <div className="bp-col-title">Policy & Admission</div>
+                <div className="bp-node-pill" style={{ borderColor: '#fbbf24', color: '#fbbf24' }}>Kyverno Policy Enforcement</div>
+                <div className="bp-node-pill">HashiCorp Vault Dynamic Tokens</div>
+                <div className="bp-node-pill">AWS GuardDuty AI Detection</div>
+              </div>
+              <div className="bp-column">
+                <div className="bp-col-title">Audit & Compliance</div>
+                <div className="bp-node-pill">AWS CloudTrail Lake Log</div>
+                <div className="bp-node-pill">Datadog SIEM Security Hub</div>
+                <div className="bp-node-pill">SOC 2 Evidence Stream</div>
+              </div>
+            </div>
+          ),
+          code: (
+            <div>
+              <div><span className="prompt"># policies/kyverno/disallow-privileged-containers.yaml</span></div>
+              <div>apiVersion: kyverno.io/v1</div>
+              <div>kind: ClusterPolicy</div>
+              <div>metadata:</div>
+              <div>&nbsp;&nbsp;name: require-ro-root-fs</div>
+              <div>spec:</div>
+              <div>&nbsp;&nbsp;validationFailureAction: Enforce <span className="cyan"># SOC2 Baseline Mandate</span></div>
+            </div>
+          )
+        }
+      };
+
+      return (
+        <section className="blueprints-section" id="blueprints">
+          <div className="container">
+            <div className="section-header">
+              <div className="section-badge">Reference Architectures</div>
+              <h2 className="section-title">Production Topologies & IaC Blueprints</h2>
+              <p className="section-desc">
+                Explore battle-tested infrastructure blueprints designed for high-concurrency enterprise workloads.
+              </p>
+            </div>
+
+            <div className="blueprints-wrapper">
+              <div className="bp-tabs-nav">
+                <button className={`bp-tab-btn ${activeBp === 'ai-cluster' ? 'active' : ''}`} onClick={() => setActiveBp('ai-cluster')}>
+                  GenAI & LLM Cluster
+                </button>
+                <button className={`bp-tab-btn ${activeBp === 'k8s-mesh' ? 'active' : ''}`} onClick={() => setActiveBp('k8s-mesh')}>
+                  Multi-Region Kubernetes
+                </button>
+                <button className={`bp-tab-btn ${activeBp === 'zero-trust' ? 'active' : ''}`} onClick={() => setActiveBp('zero-trust')}>
+                  Zero-Trust DevSecOps
+                </button>
+              </div>
+
+              {blueprintsData[activeBp].diagram}
+
+              <div className="terminal-box">
+                {blueprintsData[activeBp].code}
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // --------------------------------------------------------------------------
+    // 8. Case Studies Component
+    // --------------------------------------------------------------------------
+    function CaseStudies() {
+      return (
+        <section className="case-studies-section" id="cases">
+          <div className="container">
+            <div className="section-header">
+              <div className="section-badge">Case Studies</div>
+              <h2 className="section-title">Verified Enterprise Impact</h2>
+              <p className="section-desc">
+                Real production results delivered for tier-1 enterprises, high-growth fintechs, and industrial scale operations.
+              </p>
+            </div>
+
+            <div className="case-cards-grid">
+              <div className="case-card-item">
+                <div>
+                  <span className="case-tag-industry">Global FinTech & Banking</span>
+                  <h3>Zero-Downtime Multi-Cloud Banking Modernization</h3>
+                  <p>
+                    Migrated 340+ legacy microservices to a hardened multi-region Kubernetes platform with PCI-DSS Level 1 compliance and active-active failover.
+                  </p>
+                </div>
+                <div>
+                  <div className="case-metric-box-adv">
+                    <span className="metric-big-highlight">44.2%</span>
+                    <span style={{ fontSize: '13px', color: 'var(--text-dim)' }}>Cloud compute cost reduction across 12 regions</span>
+                  </div>
+                  <div style={{ fontSize: '13px', color: 'var(--text-dim)', fontFamily: 'var(--font-mono)' }}>
+                    SLA: 99.999% • MTTR: 3.2 Min
+                  </div>
+                </div>
+              </div>
+
+              <div className="case-card-item">
+                <div>
+                  <span className="case-tag-industry">HealthTech & Genomics AI</span>
+                  <h3>High-Throughput LLM & Biomedical Inference Pipeline</h3>
+                  <p>
+                    Re-engineered deep learning clusters using Ray and vLLM on automated GPU spot fleets, cutting model inference latency from 140ms to 18ms.
+                  </p>
+                </div>
+                <div>
+                  <div className="case-metric-box-adv">
+                    <span className="metric-big-highlight">7.8x</span>
+                    <span style={{ fontSize: '13px', color: 'var(--text-dim)' }}>Higher throughput concurrency per GPU node</span>
+                  </div>
+                  <div style={{ fontSize: '13px', color: 'var(--text-dim)', fontFamily: 'var(--font-mono)' }}>
+                    Latency: P99 18.2ms • GPU Eff: 92%
+                  </div>
+                </div>
+              </div>
+
+              <div className="case-card-item">
+                <div>
+                  <span className="case-tag-industry">Omnichannel Retail</span>
+                  <h3>Black Friday Peak Traffic Auto-Scaling (4.2M Req/Min)</h3>
+                  <p>
+                    Engineered auto-scaling Kubernetes infrastructure with Karpenter and Redis caching that seamlessly absorbed 4.2 million requests/minute with zero incidents.
+                  </p>
+                </div>
+                <div>
+                  <div className="case-metric-box-adv">
+                    <span className="metric-big-highlight">100%</span>
+                    <span style={{ fontSize: '13px', color: 'var(--text-dim)' }}>Uptime during record $85M peak sales window</span>
+                  </div>
+                  <div style={{ fontSize: '13px', color: 'var(--text-dim)', fontFamily: 'var(--font-mono)' }}>
+                    Scale: 4.2M req/min • 0 Outages
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // --------------------------------------------------------------------------
+    // 9. Discovery & Project Scoping Form Component
+    // --------------------------------------------------------------------------
+    function DiscoveryForm() {
+      const [formData, setFormData] = useState({
+        fullName: '',
+        businessEmail: '',
+        cloudProvider: 'AWS',
+        projectFocus: 'FinOps & Cost Optimization',
+        projectGoals: ''
+      });
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        const body = `Full Name: ${formData.fullName}
+Work Email: ${formData.businessEmail}
+Primary Cloud: ${formData.cloudProvider}
+Project Focus: ${formData.projectFocus}
+
+Key Objectives & Scale Requirements:
+${formData.projectGoals}`;
+
+        const mailto = `mailto:hello@cloudspecialist.work?subject=${encodeURIComponent('CloudSpecialist AI Discovery Request: ' + formData.fullName)}&body=${encodeURIComponent(body)}`;
+
+        try {
+          window.open(mailto, '_self');
+          setTimeout(() => {
+            alert('Your email client has opened. Please hit send to connect with our Principal Cloud Architects at hello@cloudspecialist.work');
+          }, 600);
+        } catch (err) {
+          navigator.clipboard.writeText(body);
+          alert('Details copied to clipboard. Please email: hello@cloudspecialist.work');
+        }
+      };
+
+      return (
+        <section className="discovery-section" id="discovery">
+          <div className="container">
+            <div className="discovery-card-wrapper">
+              <div className="discovery-layout-grid">
+                
+                <div className="discovery-info-col">
+                  <div className="section-badge">Direct Architect Access</div>
+                  <h2>Let's Build Something <span className="gradient-text">Resilient & Scalable</span></h2>
+                  <p>
+                    Connect directly with a Principal Cloud Architect to audit your architecture, optimize FinOps expenditure, or scale your AI production pipelines.
+                  </p>
+
+                  <div className="perks-list">
+                    <div className="perk-row">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>30-minute deep architectural discovery (no sales fluff)</span>
+                    </div>
+                    <div className="perk-row">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>Preliminary FinOps savings assessment & roadmap</span>
+                    </div>
+                    <div className="perk-row">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>Enterprise NDA & confidentiality guaranteed</span>
+                    </div>
+                  </div>
+                </div>
+
+                <form className="discovery-form" onSubmit={handleSubmit}>
+                  <div className="form-row-2col">
+                    <div className="form-group-item">
+                      <label htmlFor="fullName">Full Name</label>
+                      <input 
+                        type="text" 
+                        id="fullName" 
+                        className="input-field" 
+                        placeholder="e.g. Sarah Jenkins" 
+                        required
+                        value={formData.fullName}
+                        onChange={(e) => setFormData({...formData, fullName: e.target.value})}
+                      />
+                    </div>
+                    <div className="form-group-item">
+                      <label htmlFor="businessEmail">Work Email</label>
+                      <input 
+                        type="email" 
+                        id="businessEmail" 
+                        className="input-field" 
+                        placeholder="sarah@enterprise.com" 
+                        required
+                        value={formData.businessEmail}
+                        onChange={(e) => setFormData({...formData, businessEmail: e.target.value})}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-row-2col">
+                    <div className="form-group-item">
+                      <label htmlFor="cloudProvider">Primary Cloud</label>
+                      <select 
+                        id="cloudProvider" 
+                        className="select-field"
+                        value={formData.cloudProvider}
+                        onChange={(e) => setFormData({...formData, cloudProvider: e.target.value})}
+                      >
+                        <option value="AWS">Amazon Web Services (AWS)</option>
+                        <option value="Azure">Microsoft Azure</option>
+                        <option value="GCP">Google Cloud Platform</option>
+                        <option value="Hybrid / Multi-Cloud">Hybrid / Multi-Cloud</option>
+                      </select>
+                    </div>
+                    <div className="form-group-item">
+                      <label htmlFor="projectFocus">Project Focus</label>
+                      <select 
+                        id="projectFocus" 
+                        className="select-field"
+                        value={formData.projectFocus}
+                        onChange={(e) => setFormData({...formData, projectFocus: e.target.value})}
+                      >
+                        <option value="FinOps & Cost Optimization">FinOps & Cost Optimization</option>
+                        <option value="Kubernetes & Platform Modernisation">Kubernetes & Platform Modernisation</option>
+                        <option value="AI / GPU Infrastructure">AI / GPU Infrastructure</option>
+                        <option value="Zero-Downtime Cloud Migration">Zero-Downtime Cloud Migration</option>
+                        <option value="DevSecOps & Compliance">DevSecOps & Compliance</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="form-group-item">
+                    <label htmlFor="projectGoals">Key Objectives & Scale Requirements</label>
+                    <textarea 
+                      id="projectGoals" 
+                      className="textarea-field" 
+                      placeholder="Tell us about current bottlenecks, workload scale, or target deadlines..."
+                      value={formData.projectGoals}
+                      onChange={(e) => setFormData({...formData, projectGoals: e.target.value})}
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" className="btn-submit-wizard">
+                    Request Architecture Discovery Call →
+                  </button>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // --------------------------------------------------------------------------
+    // 10. Footer Component
+    // --------------------------------------------------------------------------
+    function Footer() {
+      return (
+        <footer className="footer">
+          <div className="container">
+            <div className="footer-grid-layout">
+              
+              <div className="footer-brand">
+                <div className="brand">
+                  <img src="logo.png" alt="CloudSpecialist AI Logo" style={{ width: '38px', height: '38px', borderRadius: '10px' }}/>
+                  <div className="brand-title">CLOUDSPECIALIST <span>AI</span></div>
+                </div>
+                <p>
+                  Enterprise cloud engineering, Kubernetes orchestration, FinOps cost governance, and scalable AI infrastructure.
+                </p>
+                <div style={{ marginTop: '16px', fontSize: '13.5px', color: 'var(--cyan-400)', fontFamily: 'var(--font-mono)' }}>
+                  Direct: hello@cloudspecialist.work
+                </div>
+              </div>
+
+              <div className="footer-col-item">
+                <h4>Capabilities</h4>
+                <ul className="footer-links-list">
+                  <li><a href="#capabilities">Kubernetes Platform</a></li>
+                  <li><a href="#capabilities">AI & GPU Scaling</a></li>
+                  <li><a href="#capabilities">FinOps Governance</a></li>
+                  <li><a href="#capabilities">Zero-Trust DevSecOps</a></li>
+                </ul>
+              </div>
+
+              <div className="footer-col-item">
+                <h4>Resources</h4>
+                <ul className="footer-links-list">
+                  <li><a href="#benchmarks">Cloud Benchmarks</a></li>
+                  <li><a href="#calculator">FinOps Calculator</a></li>
+                  <li><a href="#blueprints">Architecture Blueprints</a></li>
+                  <li><a href="#cases">Case Studies</a></li>
+                </ul>
+              </div>
+
+              <div className="footer-col-item">
+                <h4>Compliance</h4>
+                <ul className="footer-links-list">
+                  <li><a href="#">SOC 2 Type II Ready</a></li>
+                  <li><a href="#">ISO 27001 Posture</a></li>
+                  <li><a href="#">PCI-DSS Level 1</a></li>
+                  <li><a href="#">HIPAA Compliance</a></li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div className="footer-bottom-bar">
+              <div>© 2026 CloudSpecialist AI. All rights reserved. Enterprise-grade engineering standards.</div>
+              <div style={{ display: 'flex', gap: '24px' }}>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Security Overview</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      );
+    }
+
+    // --------------------------------------------------------------------------
+    // MAIN APP COMPONENT
+    // --------------------------------------------------------------------------
+    function App() {
+      return (
+        <div>
+          <Navbar />
+          <Hero />
+          <TrustBar />
+          <Benchmarks />
+          <Capabilities />
+          <FinOpsCalculator />
+          <Blueprints />
+          <CaseStudies />
+          <DiscoveryForm />
+          <Footer />
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+
+  <!-- Neural Constellation Canvas Animation Engine -->
+  <script>
+    (function () {
+      const canvas = document.getElementById('neural-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width, height;
+      let particles = [];
+      let mouse = { x: null, y: null, radius: 150 };
+
+      function resizeCanvas() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
+      window.addEventListener('mousemove', (e) => {
+        mouse.x = e.x;
+        mouse.y = e.y;
+      });
+      window.addEventListener('mouseleave', () => {
+        mouse.x = null;
+        mouse.y = null;
+      });
+
+      class Particle {
+        constructor() {
+          this.x = Math.random() * width;
+          this.y = Math.random() * height;
+          this.vx = (Math.random() - 0.5) * 0.45;
+          this.vy = (Math.random() - 0.5) * 0.45;
+          this.radius = Math.random() * 1.8 + 0.8;
+          this.baseColor = Math.random() > 0.4 ? 'rgba(56, 189, 248, ' : 'rgba(99, 102, 241, ';
+        }
+
+        update() {
+          this.x += this.vx;
+          this.y += this.vy;
+
+          if (this.x < 0 || this.x > width) this.vx = -this.vx;
+          if (this.y < 0 || this.y > height) this.vy = -this.vy;
+
+          if (mouse.x !== null && mouse.y !== null) {
+            const dx = mouse.x - this.x;
+            const dy = mouse.y - this.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < mouse.radius) {
+              const force = (mouse.radius - dist) / mouse.radius;
+              this.x -= (dx / dist) * force * 2.5;
+              this.y -= (dy / dist) * force * 2.5;
+            }
+          }
+        }
+
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fillStyle = this.baseColor + '0.7)';
+          ctx.fill();
+        }
+      }
+
+      const particleCount = Math.min(Math.floor((window.innerWidth * window.innerHeight) / 16000), 90);
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+          particles[i].update();
+          particles[i].draw();
+
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 130) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              const alpha = (1 - dist / 130) * 0.22;
+              ctx.strokeStyle = `rgba(56, 189, 248, ${alpha})`;
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(animate);
+      }
+      animate();
+    })();
+  </script>
+</body>
+</html>
