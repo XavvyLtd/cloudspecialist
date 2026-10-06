@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>CloudSpecialist AI | Enterprise Cloud Engineering & Platform Architecture</title>
+  <title>CloudSpecialist AI | Enterprise Cloud Engineering & AI Infrastructure</title>
   
   <!-- Primary SEO -->
-  <meta content="CloudSpecialist AI is an enterprise cloud engineering and platform modernization firm specializing in mission-critical Kubernetes, AI infrastructure, DevSecOps, and FinOps cost governance." name="description"/>
-  <meta content="Cloud Engineering, Kubernetes Architecture, AI Infrastructure, FinOps, Cloud Migration, Platform Engineering, DevSecOps, Enterprise Cloud Consulting" name="keywords"/>
+  <meta content="CloudSpecialist AI engineers production Kubernetes architectures, automated FinOps cost governance, and high-throughput AI infrastructure for enterprise workloads." name="description"/>
+  <meta content="Enterprise Cloud Engineering, Kubernetes, DevSecOps, FinOps, AI Infrastructure, Cloud Migration, Platform Architecture" name="keywords"/>
   <meta content="CloudSpecialist AI" name="author"/>
   <meta content="index, follow" name="robots"/>
   <link href="https://www.cloudspecialist.work/" rel="canonical"/>
@@ -15,7 +15,7 @@
   <!-- Open Graph / Social -->
   <meta content="website" property="og:type"/>
   <meta content="CloudSpecialist AI | Enterprise Cloud Engineering" property="og:title"/>
-  <meta content="Production Kubernetes orchestration, cloud migration, FinOps cost governance, and scalable AI infrastructure for enterprise workloads." property="og:description"/>
+  <meta content="Resilient cloud ecosystems engineered for high-concurrency enterprise and AI workloads." property="og:description"/>
   <meta content="https://www.cloudspecialist.work/" property="og:url"/>
   <meta content="CloudSpecialist AI" property="og:site_name"/>
   <meta content="https://www.cloudspecialist.work/logo.png" property="og:image"/>
@@ -23,19 +23,19 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.png"/>
   <link rel="apple-touch-icon" href="logo.png"/>
-  <meta content="#0a0f1d" name="theme-color"/>
+  <meta content="#090d16" name="theme-color"/>
 
-  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet"/>
 
   <!-- React 18 & Babel Standalone -->
   <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone@7.26.4/babel.min.js"></script>
 
-  <!-- Structured Data (Schema.org) -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -43,55 +43,37 @@
     "name": "CloudSpecialist AI",
     "url": "https://www.cloudspecialist.work",
     "logo": "https://www.cloudspecialist.work/logo.png",
-    "description": "Enterprise cloud engineering and platform modernization firm specializing in Kubernetes, FinOps, DevSecOps, and AI infrastructure.",
+    "description": "Enterprise cloud engineering, Kubernetes orchestration, FinOps cost governance, and AI infrastructure specialists.",
     "email": "hello@cloudspecialist.work",
-    "areaServed": "Global",
-    "serviceType": [
-      "Enterprise Cloud Architecture",
-      "Kubernetes & Platform Engineering",
-      "Cloud Migration & Modernization",
-      "FinOps Cost Governance",
-      "AI & GPU Infrastructure Orchestration",
-      "Zero-Trust DevSecOps"
-    ]
+    "areaServed": "Global"
   }
   </script>
 
   <style>
     /* ==========================================================================
-       EXECUTIVE DESIGN SYSTEM: CLEAN, SHARP, MODERN ENTERPRISE
+       UNIFIED EDITORIAL DESIGN SYSTEM (SLEEK, FLUID, ZERO-BOXINESS)
        ========================================================================== */
     :root {
-      --bg-primary: #0a0f1d;
-      --bg-secondary: #0f172a;
-      --bg-surface: #131c31;
-      --bg-surface-elevated: #18233c;
-      --bg-card: rgba(19, 28, 49, 0.7);
+      --bg-main: #090d16;
+      --bg-surface: #0e1524;
+      --bg-surface-elevated: #141d30;
       
-      --border-subtle: #1e293b;
-      --border-focus: #3b82f6;
-      --border-light: rgba(255, 255, 255, 0.08);
+      --border-soft: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(56, 189, 248, 0.3);
       
-      --text-primary: #f8fafc;
-      --text-secondary: #cbd5e1;
+      --text-main: #ffffff;
+      --text-sub: #cbd5e1;
       --text-muted: #94a3b8;
       --text-dim: #64748b;
       
       --accent-blue: #2563eb;
-      --accent-blue-light: #38bdf8;
-      --accent-navy: #1d4ed8;
+      --accent-cyan: #38bdf8;
       --accent-emerald: #10b981;
-      --accent-amber: #f59e0b;
+      --accent-indigo: #6366f1;
       
-      --font-heading: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
       --font-body: 'Inter', -apple-system, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
-      
-      --radius-sm: 6px;
-      --radius-md: 10px;
-      --radius-lg: 16px;
-      --radius-xl: 24px;
-      --radius-full: 9999px;
     }
 
     *, *::before, *::after {
@@ -107,12 +89,11 @@
     }
 
     body {
-      background-color: var(--bg-primary);
-      color: var(--text-primary);
+      background-color: var(--bg-main);
+      color: var(--text-main);
       font-family: var(--font-body);
-      line-height: 1.6;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
     }
 
@@ -128,144 +109,60 @@
 
     .container {
       width: 100%;
-      max-width: 1240px;
+      max-width: 1180px;
       margin: 0 auto;
       padding: 0 28px;
     }
 
-    /* Section Layouts */
-    .section-spacing {
-      padding: 100px 0;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .section-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent-blue-light);
-      padding: 4px 12px;
-      background: rgba(56, 189, 248, 0.08);
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      border-radius: var(--radius-sm);
-      margin-bottom: 16px;
-    }
-
-    .section-title {
-      font-family: var(--font-heading);
-      font-size: clamp(30px, 3.5vw, 42px);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.2;
-      color: #ffffff;
-      margin-bottom: 16px;
-    }
-
-    .section-desc {
-      font-size: 17px;
-      color: var(--text-secondary);
-      line-height: 1.7;
-      max-width: 720px;
-    }
-
-    /* Buttons */
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 13px 26px;
-      font-family: var(--font-heading);
-      font-size: 14.5px;
-      font-weight: 700;
-      color: #ffffff;
-      background: var(--accent-blue);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: var(--radius-sm);
-      transition: all 0.2s ease;
-    }
-
-    .btn-primary:hover {
-      background: #1d4ed8;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
-    }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 13px 26px;
-      font-family: var(--font-heading);
-      font-size: 14.5px;
-      font-weight: 600;
-      color: var(--text-secondary);
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      transition: all 0.2s ease;
-    }
-
-    .btn-secondary:hover {
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.08);
-      border-color: var(--border-medium);
-    }
-
-    /* Header */
+    /* Seamless Navigation */
     .topbar {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(10, 15, 29, 0.92);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-subtle);
-      height: 72px;
+      background: rgba(9, 13, 22, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-soft);
+      height: 70px;
       display: flex;
       align-items: center;
     }
 
-    .nav-inner {
+    .nav-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
     }
 
-    .brand {
+    .brand-link {
       display: flex;
       align-items: center;
       gap: 12px;
     }
 
-    .brand-logo {
-      width: 36px;
-      height: 36px;
+    .brand-logo-img {
+      width: 34px;
+      height: 34px;
       border-radius: 8px;
     }
 
-    .brand-name {
-      font-family: var(--font-heading);
+    .brand-title-text {
+      font-family: var(--font-display);
       font-size: 18px;
       font-weight: 800;
       letter-spacing: -0.02em;
       color: #ffffff;
     }
 
-    .brand-name span {
-      color: var(--accent-blue-light);
+    .brand-title-text span {
+      color: var(--accent-cyan);
     }
 
-    .nav-menu {
+    .nav-links {
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 36px;
       list-style: none;
     }
 
@@ -280,530 +177,494 @@
       color: #ffffff;
     }
 
-    /* Hero Section */
-    .hero {
-      padding: 90px 0 80px 0;
-      border-bottom: 1px solid var(--border-subtle);
-      background: radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.08) 0%, transparent 50%);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 60px;
+    .btn-cta {
+      display: inline-flex;
       align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 22px;
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      background: var(--accent-blue);
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: all 0.25s ease;
     }
 
-    .hero-h1 {
-      font-family: var(--font-heading);
-      font-size: clamp(38px, 4.4vw, 56px);
-      font-weight: 800;
-      line-height: 1.12;
-      letter-spacing: -0.035em;
+    .btn-cta:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 22px;
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-sub);
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      transition: all 0.25s ease;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.08);
       color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Hero Section: Editorial & Clean */
+    .hero-section {
+      padding: 100px 0 80px 0;
+      position: relative;
+    }
+
+    .hero-editorial {
+      max-width: 860px;
+    }
+
+    .tag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-cyan);
       margin-bottom: 22px;
     }
 
-    .hero-lead {
-      font-size: 18px;
-      line-height: 1.7;
-      color: var(--text-secondary);
-      margin-bottom: 34px;
+    .hero-heading {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 5.2vw, 64px);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      color: #ffffff;
+      margin-bottom: 26px;
     }
 
-    .hero-actions {
+    .hero-paragraph {
+      font-size: 20px;
+      line-height: 1.65;
+      color: var(--text-sub);
+      margin-bottom: 40px;
+      max-width: 720px;
+    }
+
+    .hero-actions-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 44px;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 60px;
     }
 
-    .hero-stats-banner {
+    /* Integrated Horizontal Metrics Strip */
+    .metrics-strip {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      padding-top: 30px;
-      border-top: 1px solid var(--border-subtle);
+      gap: 36px;
+      padding: 36px 0;
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
     }
 
-    .hero-stat strong {
-      display: block;
+    .metric-unit strong {
       font-family: var(--font-mono);
-      font-size: 28px;
+      font-size: 36px;
       font-weight: 700;
       color: #ffffff;
-    }
-
-    .hero-stat span {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.4;
       display: block;
-      margin-top: 2px;
+      line-height: 1;
+      margin-bottom: 8px;
     }
 
-    /* Hero Executive Card */
-    .executive-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 30px;
-    }
-
-    .exec-card-header {
-      font-family: var(--font-heading);
-      font-size: 15px;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border-subtle);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .status-active {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--accent-emerald);
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent-emerald);
-    }
-
-    .capability-metric-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    .metric-unit span {
       font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      display: block;
     }
 
-    .capability-metric-row:last-child {
-      border-bottom: none;
-    }
-
-    .capability-metric-row .metric-label {
-      color: var(--text-secondary);
-    }
-
-    .capability-metric-row .metric-val {
-      font-family: var(--font-mono);
-      font-weight: 600;
-      color: #ffffff;
-    }
-
-    /* Trust & Standards Bar */
-    .trust-bar {
-      padding: 28px 0;
-      background: var(--bg-secondary);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .trust-flex {
+    /* Trust & Standards Ribbon */
+    .trust-ribbon {
+      padding: 30px 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 24px;
-    }
-
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      color: var(--text-muted);
       font-size: 13.5px;
       font-weight: 600;
-      color: var(--text-muted);
+      border-bottom: 1px solid var(--border-soft);
     }
 
-    .trust-item svg {
+    .trust-ribbon-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trust-ribbon-item svg {
       width: 18px;
       height: 18px;
-      color: var(--accent-blue-light);
+      color: var(--accent-cyan);
     }
 
-    /* Practice Areas Grid */
-    .practice-grid {
+    /* Unified Editorial Flow: 3 Core Practices */
+    .section-editorial {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .section-intro {
+      margin-bottom: 60px;
+      max-width: 760px;
+    }
+
+    .section-intro-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 3.8vw, 44px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.18;
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+
+    .section-intro-p {
+      font-size: 18px;
+      color: var(--text-sub);
+      line-height: 1.7;
+    }
+
+    /* 3-Column Integrated Flow */
+    .pillars-flow {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 48px;
+      gap: 40px;
     }
 
-    .practice-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 30px;
-      transition: border-color 0.2s ease, transform 0.2s ease;
+    .pillar-column {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    .practice-card:hover {
-      border-color: rgba(56, 189, 248, 0.4);
-      transform: translateY(-2px);
-    }
-
-    .practice-num {
+    .pillar-index {
       font-family: var(--font-mono);
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
-      color: var(--accent-blue-light);
+      color: var(--accent-cyan);
       margin-bottom: 14px;
       display: block;
     }
 
-    .practice-card h3 {
-      font-family: var(--font-heading);
-      font-size: 20px;
-      font-weight: 700;
+    .pillar-column h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
       color: #ffffff;
-      margin-bottom: 12px;
-      line-height: 1.3;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
     }
 
-    .practice-card p {
-      font-size: 14.5px;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: 20px;
-      flex-grow: 1;
+    .pillar-column p {
+      font-size: 15px;
+      color: var(--text-sub);
+      line-height: 1.7;
+      margin-bottom: 24px;
     }
 
-    .practice-deliverables {
+    .pillar-specs {
       list-style: none;
-      padding-top: 16px;
-      border-top: 1px solid var(--border-subtle);
+      padding-top: 18px;
+      border-top: 1px solid var(--border-soft);
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
     }
 
-    .practice-deliverables li {
-      font-size: 13px;
+    .pillar-specs li {
+      font-size: 13.5px;
       color: var(--text-muted);
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
-    .practice-deliverables li::before {
-      content: '•';
-      color: var(--accent-blue-light);
+    .pillar-specs li::before {
+      content: '→';
+      color: var(--accent-cyan);
+      font-weight: bold;
     }
 
-    /* Benchmark & Evidence Table */
-    .evidence-section {
-      background: var(--bg-secondary);
-    }
-
-    .evidence-table-card {
+    /* Audited Industry Benchmarks: Unified Comparison List */
+    .benchmarks-comparison-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
       background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      margin-top: 40px;
+      border-radius: 20px;
+      padding: 50px;
+      border: 1px solid var(--border-soft);
     }
 
-    .evidence-table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-      font-size: 14px;
+    .comparison-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-soft);
     }
 
-    .evidence-table th {
-      background: rgba(0, 0, 0, 0.25);
-      padding: 16px 22px;
-      font-family: var(--font-heading);
-      font-size: 12.5px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .evidence-table td {
-      padding: 18px 22px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-      color: var(--text-secondary);
-    }
-
-    .evidence-table tr:last-child td {
+    .comparison-item:last-child {
       border-bottom: none;
     }
 
-    .evidence-table strong {
+    .comparison-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+
+    .comparison-topic {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
       color: #ffffff;
-      font-family: var(--font-heading);
     }
 
-    .evidence-table .source-tag {
+    .comparison-gain {
       font-family: var(--font-mono);
-      font-size: 11.5px;
-      color: var(--text-dim);
-    }
-
-    .evidence-table .result-metric {
-      font-family: var(--font-mono);
+      font-size: 14px;
       font-weight: 700;
       color: var(--accent-emerald);
     }
 
-    /* Engagement Methodology */
-    .framework-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-top: 48px;
-    }
-
-    .framework-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 24px;
-      position: relative;
-    }
-
-    .framework-step {
-      font-family: var(--font-mono);
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--accent-blue-light);
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    .framework-card h4 {
-      font-family: var(--font-heading);
-      font-size: 18px;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 10px;
-    }
-
-    .framework-card p {
-      font-size: 13.5px;
-      color: var(--text-secondary);
+    .comparison-detail {
+      font-size: 14px;
+      color: var(--text-muted);
       line-height: 1.6;
     }
 
-    /* Enterprise Case Studies */
-    .case-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 48px;
+    .comparison-source {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-top: 4px;
+      display: block;
     }
 
-    .case-box {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 30px;
+    /* Case Study Spotlights */
+    .case-spotlight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .case-spotlight-item {
+      border-top: 2px solid var(--border-soft);
+      padding-top: 24px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    .case-sector {
+    .case-spotlight-item:hover {
+      border-top-color: var(--accent-cyan);
+    }
+
+    .case-badge-meta {
       font-family: var(--font-mono);
       font-size: 11.5px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--accent-blue-light);
+      color: var(--accent-cyan);
       margin-bottom: 12px;
       display: block;
     }
 
-    .case-box h3 {
-      font-family: var(--font-heading);
-      font-size: 19px;
-      font-weight: 700;
+    .case-spotlight-item h4 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 800;
       color: #ffffff;
       margin-bottom: 12px;
-      line-height: 1.35;
+      line-height: 1.3;
     }
 
-    .case-box p {
-      font-size: 14px;
-      color: var(--text-secondary);
-      line-height: 1.6;
+    .case-spotlight-item p {
+      font-size: 14.5px;
+      color: var(--text-sub);
+      line-height: 1.65;
       margin-bottom: 24px;
-      flex-grow: 1;
     }
 
-    .case-kpi-block {
-      background: rgba(0, 0, 0, 0.25);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 14px;
-      margin-bottom: 12px;
+    .case-kpi-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-soft);
     }
 
-    .case-kpi-val {
+    .case-kpi-row strong {
       font-family: var(--font-mono);
-      font-size: 22px;
+      font-size: 26px;
       font-weight: 700;
       color: var(--accent-emerald);
-      display: block;
     }
 
-    .case-kpi-lbl {
-      font-size: 12px;
-      color: var(--text-dim);
+    .case-kpi-row span {
+      font-size: 12.5px;
+      color: var(--text-muted);
     }
 
-    /* Interactive Project Scoping Assessment */
-    .scoping-section {
-      background: var(--bg-secondary);
-    }
-
-    .scoping-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 44px;
-    }
-
-    .scoping-grid {
+    /* Consultation & Scoping Form: Clean & Integrated */
+    .consultation-wrap {
       display: grid;
       grid-template-columns: 1fr 1.1fr;
-      gap: 50px;
+      gap: 60px;
       align-items: center;
+      background: var(--bg-surface);
+      border-radius: 24px;
+      padding: 56px;
+      border: 1px solid var(--border-soft);
     }
 
-    .form-row {
+    .form-grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 16px;
+      gap: 18px;
+      margin-bottom: 18px;
     }
 
-    .form-group {
-      margin-bottom: 16px;
+    .form-group-unified {
+      margin-bottom: 18px;
     }
 
-    .form-label {
+    .field-label {
       display: block;
       font-size: 13px;
       font-weight: 600;
-      color: var(--text-secondary);
+      color: var(--text-sub);
       margin-bottom: 6px;
     }
 
-    .form-control {
+    .field-input, .field-select, .field-textarea {
       width: 100%;
-      padding: 12px 16px;
-      background: #090d1a;
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
+      padding: 13px 16px;
+      background: #080c16;
+      border: 1px solid var(--border-soft);
+      border-radius: 8px;
       color: #ffffff;
       font-family: inherit;
       font-size: 14px;
       transition: border-color 0.2s ease;
     }
 
-    .form-control:focus {
+    .field-input:focus, .field-select:focus, .field-textarea:focus {
       outline: none;
-      border-color: var(--accent-blue-light);
+      border-color: var(--accent-cyan);
     }
 
-    textarea.form-control {
+    .field-textarea {
       min-height: 90px;
       resize: vertical;
     }
 
     /* Footer */
-    .footer {
-      padding: 60px 0 30px 0;
-      background: #070a14;
+    .footer-unified {
+      padding: 70px 0 35px 0;
+      background: #060910;
       font-size: 13.5px;
       color: var(--text-dim);
     }
 
-    .footer-grid {
+    .footer-main-row {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 40px;
-      padding-bottom: 40px;
-      border-bottom: 1px solid var(--border-subtle);
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border-soft);
     }
 
     .footer-col h5 {
-      font-family: var(--font-heading);
-      font-size: 13px;
+      font-family: var(--font-display);
+      font-size: 13.5px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       color: #ffffff;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .footer-col ul {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 11px;
     }
 
     .footer-col ul a:hover {
       color: #ffffff;
     }
 
-    .footer-bottom {
+    .footer-bottom-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 24px;
+      padding-top: 26px;
     }
 
     /* Responsive */
     @media (max-width: 1024px) {
-      .hero-grid, .scoping-grid {
+      .pillars-flow, .case-spotlight-grid {
         grid-template-columns: 1fr;
         gap: 40px;
       }
-      .practice-grid, .framework-grid, .case-grid {
-        grid-template-columns: 1fr 1fr;
+      .benchmarks-comparison-strip, .consultation-wrap {
+        grid-template-columns: 1fr;
+        padding: 36px;
       }
-      .footer-grid {
+      .footer-main-row {
         grid-template-columns: 1fr 1fr;
       }
     }
 
     @media (max-width: 768px) {
-      .nav-menu {
+      .nav-links {
         display: none;
       }
-      .practice-grid, .framework-grid, .case-grid, .hero-stats-banner, .form-row {
+      .metrics-strip {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .form-grid-2 {
         grid-template-columns: 1fr;
       }
-      .trust-flex {
-        flex-direction: column;
-        align-items: flex-start;
+      .hero-section {
+        padding: 60px 0 40px 0;
       }
-      .footer-grid {
+      .footer-main-row {
         grid-template-columns: 1fr;
       }
-      .footer-bottom {
+      .footer-bottom-row {
         flex-direction: column;
-        gap: 12px;
+        gap: 14px;
         text-align: center;
       }
     }
@@ -844,7 +705,7 @@ ${formData.notes}`;
           window.open(mailto, '_self');
         } catch (err) {
           navigator.clipboard.writeText(body);
-          alert('Details copied to clipboard. Please email hello@cloudspecialist.work');
+          alert('Details copied to clipboard. Please email: hello@cloudspecialist.work');
         }
       };
 
@@ -853,20 +714,19 @@ ${formData.notes}`;
           {/* Header */}
           <header className="topbar">
             <div className="container">
-              <div className="nav-inner">
-                <a href="#" className="brand">
-                  <img src="logo.png" alt="CloudSpecialist AI Logo" className="brand-logo"/>
-                  <div className="brand-name">CLOUDSPECIALIST <span>AI</span></div>
+              <div className="nav-content">
+                <a href="#" className="brand-link">
+                  <img src="logo.png" alt="CloudSpecialist AI Logo" className="brand-logo-img"/>
+                  <div className="brand-title-text">CLOUDSPECIALIST <span>AI</span></div>
                 </a>
 
-                <ul className="nav-menu">
-                  <li className="nav-item"><a href="#capabilities">Practice Areas</a></li>
-                  <li className="nav-item"><a href="#evidence">Evidence & Benchmarks</a></li>
-                  <li className="nav-item"><a href="#framework">Methodology</a></li>
-                  <li className="nav-item"><a href="#case-studies">Case Studies</a></li>
+                <ul className="nav-links">
+                  <li className="nav-item"><a href="#capabilities">Capabilities</a></li>
+                  <li className="nav-item"><a href="#benchmarks">Benchmarks</a></li>
+                  <li className="nav-item"><a href="#cases">Case Studies</a></li>
                 </ul>
 
-                <a href="#consultation" className="btn-primary" style={{ padding: '10px 20px', fontSize: '13.5px' }}>
+                <a href="#consultation" className="btn-cta">
                   Scope Engagement
                 </a>
               </div>
@@ -874,388 +734,235 @@ ${formData.notes}`;
           </header>
 
           {/* Hero Section */}
-          <section className="hero">
+          <section className="hero-section">
             <div className="container">
-              <div className="hero-grid">
-                <div>
-                  <div className="section-badge">Enterprise Cloud Advisory & Engineering</div>
-                  <h1 className="hero-h1">
-                    Architecting Resilient Cloud Infrastructure for Scale.
-                  </h1>
-                  <p className="hero-lead">
-                    CloudSpecialist AI delivers mission-critical Kubernetes platforms, automated FinOps cost recovery, and scalable AI infrastructure for enterprise organizations requiring guaranteed SLAs.
-                  </p>
+              <div className="hero-editorial">
+                <div className="tag-badge">Enterprise Cloud Advisory & Engineering</div>
+                <h1 className="hero-heading">
+                  Architecting Resilient Cloud Infrastructure for Scale.
+                </h1>
+                <p className="hero-paragraph">
+                  CloudSpecialist AI engineers mission-critical Kubernetes platforms, autonomous FinOps cost governance, and scalable AI infrastructure for enterprise organizations requiring guaranteed SLAs.
+                </p>
 
-                  <div className="hero-actions">
-                    <a href="#consultation" className="btn-primary">
-                      Schedule Principal Architect Review
-                    </a>
-                    <a href="#evidence" className="btn-secondary">
-                      View Audited Benchmarks
-                    </a>
-                  </div>
-
-                  <div className="hero-stats-banner">
-                    <div className="hero-stat">
-                      <strong>99.999%</strong>
-                      <span>High availability & multi-region DR SLA</span>
-                    </div>
-                    <div className="hero-stat">
-                      <strong>41.8%</strong>
-                      <span>Average audited cloud spend reduction</span>
-                    </div>
-                    <div className="hero-stat">
-                      <strong>&lt; 15ms</strong>
-                      <span>P99 inference latency on optimized AI clusters</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Executive SLA & Platform Posture Card */}
-                <div className="executive-card">
-                  <div className="exec-card-header">
-                    <span>ENTERPRISE PLATFORM STATUS</span>
-                    <span className="status-active">
-                      <span className="status-dot"></span>
-                      100% OPERATIONAL
-                    </span>
-                  </div>
-
-                  <div className="capability-metric-row">
-                    <span className="metric-label">Kubernetes Orchestration</span>
-                    <span className="metric-val">EKS / AKS / GKE (v1.31)</span>
-                  </div>
-                  <div className="capability-metric-row">
-                    <span className="metric-label">FinOps Cost Recovery Rate</span>
-                    <span className="metric-val" style={{ color: 'var(--accent-emerald)' }}>35% – 48% Audited</span>
-                  </div>
-                  <div className="capability-metric-row">
-                    <span className="metric-label">Deployment Automation</span>
-                    <span className="metric-val">ArgoCD / Terraform GitOps</span>
-                  </div>
-                  <div className="capability-metric-row">
-                    <span className="metric-label">AI / GPU Model Serving</span>
-                    <span className="metric-val">vLLM & Ray Distributed</span>
-                  </div>
-                  <div className="capability-metric-row">
-                    <span className="metric-label">Zero-Trust Compliance</span>
-                    <span className="metric-val">SOC 2 / ISO 27001 / PCI-DSS</span>
-                  </div>
+                <div className="hero-actions-row">
+                  <a href="#consultation" className="btn-cta" style={{ padding: '14px 30px', fontSize: '15px' }}>
+                    Schedule Architecture Review
+                  </a>
+                  <a href="#capabilities" className="btn-outline" style={{ padding: '14px 28px', fontSize: '15px' }}>
+                    Explore Capabilities
+                  </a>
                 </div>
               </div>
-            </div>
-          </section>
 
-          {/* Trust & Partnership Standards */}
-          <div className="trust-bar">
-            <div className="container">
-              <div className="trust-flex">
-                <div className="trust-item">
+              {/* Integrated Metrics Strip */}
+              <div className="metrics-strip">
+                <div className="metric-unit">
+                  <strong>99.999%</strong>
+                  <span>High availability SLA with multi-region active-active failover</span>
+                </div>
+                <div className="metric-unit">
+                  <strong>41.8%</strong>
+                  <span>Average audited cloud spend recovery through FinOps governance</span>
+                </div>
+                <div className="metric-unit">
+                  <strong>&lt; 15ms</strong>
+                  <span>P99 inference latency delivered on optimized AI clusters</span>
+                </div>
+              </div>
+
+              {/* Trust Standards Ribbon */}
+              <div className="trust-ribbon">
+                <div className="trust-ribbon-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  <span>SOC 2 Type II Certified Practice</span>
+                  <span>SOC 2 Type II Practice</span>
                 </div>
-                <div className="trust-item">
+                <div className="trust-ribbon-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
-                  <span>ISO 27001 Hardened Framework</span>
+                  <span>ISO 27001 Framework</span>
                 </div>
-                <div className="trust-item">
+                <div className="trust-ribbon-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
-                  <span>AWS Advanced Tier Competency</span>
+                  <span>AWS Advanced Tier</span>
                 </div>
-                <div className="trust-item">
+                <div className="trust-ribbon-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-                  <span>Microsoft Azure Gold Tier</span>
+                  <span>Microsoft Azure Gold</span>
                 </div>
-                <div className="trust-item">
+                <div className="trust-ribbon-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polygon points="2 17 12 22 22 17"/><polygon points="2 12 12 17 22 12"/></svg>
                   <span>CNCF Kubernetes Certified</span>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          {/* Practice Areas */}
-          <section className="section-spacing" id="capabilities">
+          {/* Core Practice Areas: 3-Column Integrated Flow */}
+          <section className="section-editorial" id="capabilities">
             <div className="container">
-              <div>
-                <div className="section-badge">Core Capabilities</div>
-                <h2 className="section-title">Enterprise Engineering Practice Areas</h2>
-                <p className="section-desc">
-                  Disciplined cloud engineering practices focused on stability, cost efficiency, and zero-downtime execution.
+              <div className="section-intro">
+                <div className="tag-badge">Engineering Practices</div>
+                <h2 className="section-intro-title">Three Core Pillars of Enterprise Scale</h2>
+                <p className="section-intro-p">
+                  We focus on eliminating operational risk, removing cloud cost waste, and enabling high-throughput AI workloads.
                 </p>
               </div>
 
-              <div className="practice-grid">
-                <div className="practice-card">
+              <div className="pillars-flow">
+                <div className="pillar-column">
                   <div>
-                    <span className="practice-num">01 / PLATFORM</span>
+                    <span className="pillar-index">01 / PLATFORM</span>
                     <h3>Kubernetes & Service Mesh</h3>
                     <p>
-                      Production-grade cluster design with Karpenter dynamic scaling, Cilium eBPF networking, and multi-region failover.
+                      Hardened EKS, AKS, and GKE cluster design with Karpenter dynamic scaling, Cilium eBPF networking, and zero-downtime rolling ingress.
                     </p>
                   </div>
-                  <ul className="practice-deliverables">
+                  <ul className="pillar-specs">
                     <li>Multi-Region Active-Active Topologies</li>
-                    <li>Zero-Downtime Rolling Ingress</li>
-                    <li>eBPF Kernel-Level Telemetry</li>
+                    <li>Declarative ArgoCD GitOps Automation</li>
+                    <li>Sub-Second Automated Failover</li>
                   </ul>
                 </div>
 
-                <div className="practice-card">
+                <div className="pillar-column">
                   <div>
-                    <span className="practice-num">02 / FINOPS</span>
+                    <span className="pillar-index">02 / FINOPS</span>
                     <h3>Cloud Cost Governance</h3>
                     <p>
-                      Automated unit-economics tracking, spot instance fleet arbitrage, and commitment discount optimization.
+                      Continuous unit-economics tracking, spot instance fleet arbitrage, and commitment discount optimization delivering 35%–48% cost recovery.
                     </p>
                   </div>
-                  <ul className="practice-deliverables">
-                    <li>35%–48% Average Audited Savings</li>
+                  <ul className="pillar-specs">
                     <li>Automated Karpenter Rightsizing</li>
-                    <li>Tenant-Level Spend Visibility</li>
+                    <li>Savings Plan & RI Coverage (94%+)</li>
+                    <li>Tenant-Level Spend Observability</li>
                   </ul>
                 </div>
 
-                <div className="practice-card">
+                <div className="pillar-column">
                   <div>
-                    <span className="practice-num">03 / AI & GPU</span>
+                    <span className="pillar-index">03 / AI & GPU</span>
                     <h3>AI Inference Infrastructure</h3>
                     <p>
-                      High-throughput model serving pipelines with vLLM, TensorRT-LLM, Ray clusters, and Triton Inference Server.
+                      High-throughput model serving pipelines on Ray, vLLM, and TensorRT-LLM with GPU memory slicing (MIG) on automated spot fleets.
                     </p>
                   </div>
-                  <ul className="practice-deliverables">
+                  <ul className="pillar-specs">
                     <li>Sub-15ms P99 Token Latency</li>
-                    <li>GPU Memory Slicing (MIG / Spot)</li>
+                    <li>88%–94% Peak GPU Utilization</li>
                     <li>Low-Latency Vector Database Mesh</li>
                   </ul>
                 </div>
-
-                <div className="practice-card">
-                  <div>
-                    <span className="practice-num">04 / DEVSECOPS</span>
-                    <h3>Zero-Trust Delivery Pipelines</h3>
-                    <p>
-                      Declarative GitOps automation with ArgoCD, cryptographic SBOM image signing, and runtime policy enforcement.
-                    </p>
-                  </div>
-                  <ul className="practice-deliverables">
-                    <li>Cryptographic Image Verification</li>
-                    <li>OIDC Short-Lived Identity</li>
-                    <li>Automated Drift Remediation</li>
-                  </ul>
-                </div>
-
-                <div className="practice-card">
-                  <div>
-                    <span className="practice-num">05 / MIGRATION</span>
-                    <h3>Legacy Cloud Modernization</h3>
-                    <p>
-                      Systematic phased cutovers from monoliths and legacy on-prem hypervisors to resilient cloud-native microservices.
-                    </p>
-                  </div>
-                  <ul className="practice-deliverables">
-                    <li>Zero-Downtime Data Re-Platforming</li>
-                    <li>Stateful Workload Migration</li>
-                    <li>Automated Rollback Safeguards</li>
-                  </ul>
-                </div>
-
-                <div className="practice-card">
-                  <div>
-                    <span className="practice-num">06 / SRE</span>
-                    <h3>24/7 Platform Reliability</h3>
-                    <p>
-                      SLA-backed platform operations, unified Datadog / OpenTelemetry observability, and automated incident response.
-                    </p>
-                  </div>
-                  <ul className="practice-deliverables">
-                    <li>Sub-6 Minute Incident MTTR</li>
-                    <li>Continuous Chaos Engineering</li>
-                    <li>Executive Availability Reporting</li>
-                  </ul>
-                </div>
               </div>
             </div>
           </section>
 
-          {/* Evidence & Industry Benchmarks */}
-          <section className="section-spacing evidence-section" id="evidence">
+          {/* Audited Benchmarks: Unified Split Comparison */}
+          <section className="section-editorial" id="benchmarks">
             <div className="container">
-              <div>
-                <div className="section-badge">Empirical Evidence</div>
-                <h2 className="section-title">Industry Benchmarks vs. CloudSpecialist Deliverables</h2>
-                <p className="section-desc">
-                  Data-backed comparison of standard enterprise cloud metrics against outcomes delivered by our engineering teams.
-                </p>
-              </div>
-
-              <div className="evidence-table-card">
-                <table className="evidence-table">
-                  <thead>
-                    <tr>
-                      <th>Area & Benchmark</th>
-                      <th>Industry Average (Sourced)</th>
-                      <th>CloudSpecialist Standard</th>
-                      <th>Deliverable Impact</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <strong>Cloud Spend Efficiency</strong>
-                        <div className="source-tag">Flexera 2025 State of the Cloud Report</div>
-                      </td>
-                      <td>32% wasted compute & orphaned storage</td>
-                      <td className="result-metric">35% – 48% Reclaimed</td>
-                      <td>Automated Karpenter spot fleets & rightsizing</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <strong>Deployment Frequency & MTTR</strong>
-                        <div className="source-tag">DORA State of DevOps Assessment</div>
-                      </td>
-                      <td>Weekly / monthly releases; hours to recover</td>
-                      <td className="result-metric">208x Faster / &lt;6m MTTR</td>
-                      <td>Declarative ArgoCD GitOps pipelines with auto-rollback</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <strong>AI & GPU Cluster Utilization</strong>
-                        <div className="source-tag">Stanford AI Index & Gartner 2025</div>
-                      </td>
-                      <td>40%–55% utilization with memory bottlenecks</td>
-                      <td className="result-metric">88% – 94% Peak Efficiency</td>
-                      <td>vLLM / TensorRT dynamic batching & GPU partitioning</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <strong>Multi-Region Service Continuity</strong>
-                        <div className="source-tag">Uptime Institute Annual Resilience Study</div>
-                      </td>
-                      <td>Manual failover (15 – 45 min RTO)</td>
-                      <td className="result-metric">&lt; 300ms Automated RTO</td>
-                      <td>eBPF Cilium mesh & Route53 latency routing</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </section>
-
-          {/* Engagement Methodology */}
-          <section className="section-spacing" id="framework">
-            <div className="container">
-              <div>
-                <div className="section-badge">Methodology</div>
-                <h2 className="section-title">Structured Engagement Framework</h2>
-                <p className="section-desc">
-                  A predictable 4-stage engineering lifecycle designed for risk elimination and measurable business outcomes.
-                </p>
-              </div>
-
-              <div className="framework-grid">
-                <div className="framework-card">
-                  <span className="framework-step">PHASE 01</span>
-                  <h4>Deep Discovery & Audit</h4>
-                  <p>
-                    Comprehensive architectural telemetry audit, FinOps cost analysis, and security posture scan across all cloud accounts.
+              <div className="benchmarks-comparison-strip">
+                <div>
+                  <div className="tag-badge">Audited Telemetry</div>
+                  <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '34px', fontWeight: 800, lineHeight: 1.2, color: '#ffffff', marginBottom: '18px' }}>
+                    Sourced Benchmarks vs. CloudSpecialist Deliverables
+                  </h2>
+                  <p style={{ color: 'var(--text-sub)', fontSize: '16px', lineHeight: 1.7, marginBottom: '24px' }}>
+                    Unoptimized cloud infrastructure silently drains enterprise margins. We apply empirical platform engineering to reclaim budget and accelerate velocity.
                   </p>
-                </div>
-
-                <div className="framework-card">
-                  <span className="framework-step">PHASE 02</span>
-                  <h4>Target Architecture POC</h4>
-                  <p>
-                    Modular Terraform blueprint authoring, benchmark verification in staging, and security baseline hardening.
-                  </p>
-                </div>
-
-                <div className="framework-card">
-                  <span className="framework-step">PHASE 03</span>
-                  <h4>Zero-Downtime Rollout</h4>
-                  <p>
-                    Phased canary cutover, data migration synchronisation, and live operational validation under production traffic.
-                  </p>
-                </div>
-
-                <div className="framework-card">
-                  <span className="framework-step">PHASE 04</span>
-                  <h4>Governance & Handover</h4>
-                  <p>
-                    Continuous FinOps policy enforcement, automated SRE dashboards, and complete team documentation enablement.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Case Studies */}
-          <section className="section-spacing" id="case-studies">
-            <div className="container">
-              <div>
-                <div className="section-badge">Proven Track Record</div>
-                <h2 className="section-title">Enterprise Case Studies</h2>
-                <p className="section-desc">
-                  Selected delivery highlights across financial services, healthtech, and high-concurrency digital commerce.
-                </p>
-              </div>
-
-              <div className="case-grid">
-                <div className="case-box">
-                  <div>
-                    <span className="case-sector">Tier-1 Banking & FinTech</span>
-                    <h3>Core Banking Kubernetes Modernization</h3>
-                    <p>
-                      Migrated 340+ distributed banking microservices to a hardened multi-region EKS cluster with active-active PCI-DSS compliance.
-                    </p>
+                  <div style={{ color: 'var(--text-muted)', fontSize: '13.5px' }}>
+                    Verified against Flexera 2025 State of the Cloud & DORA DevOps standards.
                   </div>
-                  <div>
-                    <div className="case-kpi-block">
-                      <span className="case-kpi-val">44.2%</span>
-                      <span className="case-kpi-lbl">Compute cost reduction across 12 regions</span>
+                </div>
+
+                <div>
+                  <div className="comparison-item">
+                    <div className="comparison-item-header">
+                      <span className="comparison-topic">Cloud Spend Waste</span>
+                      <span className="comparison-gain">35% – 48% Reclaimed</span>
                     </div>
-                    <div style={{ fontSize: '13px', color: 'var(--text-dim)', fontFamily: 'var(--font-mono)' }}>
-                      Availability: 99.999% SLA • 0 Downtime Cutover
+                    <p className="comparison-detail">
+                      Flexera 2025 reports 32% of enterprise cloud compute is unallocated or idle. We eliminate over-provisioning via automated spot fleets.
+                    </p>
+                    <span className="comparison-source">Flexera State of the Cloud Report 2025</span>
+                  </div>
+
+                  <div className="comparison-item">
+                    <div className="comparison-item-header">
+                      <span className="comparison-topic">Deployment Frequency & MTTR</span>
+                      <span className="comparison-gain">208x Faster / &lt;6m MTTR</span>
                     </div>
+                    <p className="comparison-detail">
+                      DORA research shows elite GitOps teams deploy 208x more frequently with 7x lower change failure rates through automated DevSecOps.
+                    </p>
+                    <span className="comparison-source">DORA DevOps Research & Assessment</span>
+                  </div>
+
+                  <div className="comparison-item">
+                    <div className="comparison-item-header">
+                      <span className="comparison-topic">AI & GPU Utilization</span>
+                      <span className="comparison-gain">88% – 94% Peak Efficiency</span>
+                    </div>
+                    <p className="comparison-detail">
+                      Stanford AI Index highlights over 80% of enterprise AI models suffer from GPU memory bottlenecks. We partition compute with vLLM dynamic batching.
+                    </p>
+                    <span className="comparison-source">Stanford AI Index & Gartner 2025</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Case Studies: Spotlight Row */}
+          <section className="section-editorial" id="cases">
+            <div className="container">
+              <div className="section-intro">
+                <div className="tag-badge">Client Transformations</div>
+                <h2 className="section-intro-title">Proven Enterprise Outcomes</h2>
+                <p className="section-intro-p">
+                  Selected delivery highlights across financial services, healthtech, and global digital commerce.
+                </p>
+              </div>
+
+              <div className="case-spotlight-grid">
+                <div className="case-spotlight-item">
+                  <div>
+                    <span className="case-badge-meta">Global FinTech & Banking</span>
+                    <h4>Core Banking Kubernetes Modernization</h4>
+                    <p>
+                      Migrated 340+ distributed banking microservices to a multi-region EKS cluster with active-active PCI-DSS Level 1 compliance.
+                    </p>
+                  </div>
+                  <div className="case-kpi-row">
+                    <strong>44.2%</strong>
+                    <span>Compute cost reduction across 12 regions (99.999% SLA)</span>
                   </div>
                 </div>
 
-                <div className="case-box">
+                <div className="case-spotlight-item">
                   <div>
-                    <span className="case-sector">Biomedical & Genomics AI</span>
-                    <h3>High-Throughput LLM Inference Cluster</h3>
+                    <span className="case-badge-meta">Genomics & AI HealthTech</span>
+                    <h4>High-Throughput LLM Inference Cluster</h4>
                     <p>
                       Orchestrated containerized Ray and vLLM inference workloads on automated GPU spot fleets, cutting inference latency from 140ms to 18ms.
                     </p>
                   </div>
-                  <div>
-                    <div className="case-kpi-block">
-                      <span className="case-kpi-val">7.8x</span>
-                      <span className="case-kpi-lbl">Higher concurrent throughput per GPU node</span>
-                    </div>
-                    <div style={{ fontSize: '13px', color: 'var(--text-dim)', fontFamily: 'var(--font-mono)' }}>
-                      P99 Latency: 18.2ms • GPU Utilization: 92%
-                    </div>
+                  <div className="case-kpi-row">
+                    <strong>7.8x</strong>
+                    <span>Higher throughput concurrency per GPU node (P99 18.2ms)</span>
                   </div>
                 </div>
 
-                <div className="case-box">
+                <div className="case-spotlight-item">
                   <div>
-                    <span className="case-sector">Omnichannel Retail</span>
-                    <h3>Black Friday Scale (4.2M Req/Min)</h3>
+                    <span className="case-badge-meta">Omnichannel Retail</span>
+                    <h4>Black Friday Scale (4.2M Req/Min)</h4>
                     <p>
                       Engineered auto-scaling Kubernetes infrastructure with Karpenter that absorbed 4.2 million requests/minute with zero platform incidents.
                     </p>
                   </div>
-                  <div>
-                    <div className="case-kpi-block">
-                      <span className="case-kpi-val">100%</span>
-                      <span className="case-kpi-lbl">Uptime during record $85M peak sales window</span>
-                    </div>
-                    <div style={{ fontSize: '13px', color: 'var(--text-dim)', fontFamily: 'var(--font-mono)' }}>
-                      Scale: 4.2M req/min • 0 Security Incidents
-                    </div>
+                  <div className="case-kpi-row">
+                    <strong>100%</strong>
+                    <span>Uptime during record $85M peak sales window</span>
                   </div>
                 </div>
               </div>
@@ -1263,137 +970,135 @@ ${formData.notes}`;
           </section>
 
           {/* Direct Consultation / Engagement Form */}
-          <section className="section-spacing scoping-section" id="consultation">
+          <section className="section-editorial" id="consultation" style={{ borderBottom: 'none' }}>
             <div className="container">
-              <div className="scoping-card">
-                <div className="scoping-grid">
-                  <div>
-                    <div className="section-badge">Principal Review</div>
-                    <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '32px', fontWeight: 800, color: '#ffffff', marginBottom: '16px' }}>
-                      Scope an Enterprise Engagement
-                    </h2>
-                    <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: '28px' }}>
-                      Speak directly with a Principal Cloud Architect to evaluate your infrastructure, review cloud spend governance, or design your production platform roadmap.
-                    </p>
+              <div className="consultation-wrap">
+                <div>
+                  <div className="tag-badge">Direct Access</div>
+                  <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '34px', fontWeight: 800, color: '#ffffff', marginBottom: '16px', lineHeight: 1.2 }}>
+                    Scope an Enterprise Architecture Review
+                  </h2>
+                  <p style={{ color: 'var(--text-sub)', lineHeight: 1.7, marginBottom: '28px' }}>
+                    Speak directly with a Principal Cloud Architect to evaluate your infrastructure, review cloud spend governance, or design your production platform roadmap.
+                  </p>
 
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', fontSize: '14px', color: 'var(--text-secondary)' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <span style={{ color: 'var(--accent-emerald)', fontWeight: 'bold' }}>✓</span>
-                        <span>30-minute architectural assessment with zero sales intermediaries</span>
-                      </div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <span style={{ color: 'var(--accent-emerald)', fontWeight: 'bold' }}>✓</span>
-                        <span>Preliminary FinOps savings and infrastructure roadmap</span>
-                      </div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <span style={{ color: 'var(--accent-emerald)', fontWeight: 'bold' }}>✓</span>
-                        <span>Full enterprise NDA protection</span>
-                      </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', fontSize: '14px', color: 'var(--text-sub)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                      <span style={{ color: 'var(--accent-emerald)', fontWeight: 'bold' }}>✓</span>
+                      <span>30-minute architectural assessment with zero sales intermediaries</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                      <span style={{ color: 'var(--accent-emerald)', fontWeight: 'bold' }}>✓</span>
+                      <span>Preliminary FinOps savings and infrastructure roadmap</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                      <span style={{ color: 'var(--accent-emerald)', fontWeight: 'bold' }}>✓</span>
+                      <span>Full enterprise NDA protection</span>
+                    </div>
+                  </div>
+                </div>
+
+                <form onSubmit={handleSubmit}>
+                  <div className="form-grid-2">
+                    <div>
+                      <label className="field-label">Full Name</label>
+                      <input 
+                        type="text" 
+                        className="field-input" 
+                        placeholder="e.g. Sarah Jenkins"
+                        required
+                        value={formData.fullName}
+                        onChange={(e) => setFormData({...formData, fullName: e.target.value})}
+                      />
+                    </div>
+                    <div>
+                      <label className="field-label">Work Email</label>
+                      <input 
+                        type="email" 
+                        className="field-input" 
+                        placeholder="sarah@enterprise.com"
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      />
                     </div>
                   </div>
 
-                  <form onSubmit={handleSubmit}>
-                    <div className="form-row">
-                      <div>
-                        <label className="form-label">Full Name</label>
-                        <input 
-                          type="text" 
-                          className="form-control" 
-                          placeholder="e.g. Sarah Jenkins"
-                          required
-                          value={formData.fullName}
-                          onChange={(e) => setFormData({...formData, fullName: e.target.value})}
-                        />
-                      </div>
-                      <div>
-                        <label className="form-label">Work Email</label>
-                        <input 
-                          type="email" 
-                          className="form-control" 
-                          placeholder="sarah@enterprise.com"
-                          required
-                          value={formData.email}
-                          onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="form-row">
-                      <div>
-                        <label className="form-label">Primary Environment</label>
-                        <select 
-                          className="form-control"
-                          value={formData.environment}
-                          onChange={(e) => setFormData({...formData, environment: e.target.value})}
-                        >
-                          <option value="AWS">Amazon Web Services (AWS)</option>
-                          <option value="Azure">Microsoft Azure</option>
-                          <option value="GCP">Google Cloud Platform</option>
-                          <option value="Multi-Cloud">Multi-Cloud / Hybrid</option>
-                        </select>
-                      </div>
-                      <div>
-                        <label className="form-label">Monthly Cloud Spend</label>
-                        <select 
-                          className="form-control"
-                          value={formData.spendTier}
-                          onChange={(e) => setFormData({...formData, spendTier: e.target.value})}
-                        >
-                          <option value="< $50k / mo">&lt; $50,000 / mo</option>
-                          <option value="$50k - $150k / mo">$50,000 – $150,000 / mo</option>
-                          <option value="$150k - $500k / mo">$150,000 – $500,000 / mo</option>
-                          <option value="> $500k / mo">&gt; $500,000 / mo</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div className="form-group">
-                      <label className="form-label">Primary Focus</label>
+                  <div className="form-grid-2">
+                    <div>
+                      <label className="field-label">Primary Environment</label>
                       <select 
-                        className="form-control"
-                        value={formData.scope}
-                        onChange={(e) => setFormData({...formData, scope: e.target.value})}
+                        className="field-select"
+                        value={formData.environment}
+                        onChange={(e) => setFormData({...formData, environment: e.target.value})}
                       >
-                        <option value="Kubernetes Platform Architecture">Kubernetes Platform Architecture</option>
-                        <option value="FinOps & Cost Optimization Audit">FinOps & Cost Optimization Audit</option>
-                        <option value="AI / GPU Infrastructure Orchestration">AI / GPU Infrastructure Orchestration</option>
-                        <option value="Zero-Downtime Cloud Migration">Zero-Downtime Cloud Migration</option>
-                        <option value="DevSecOps & Compliance Hardening">DevSecOps & Compliance Hardening</option>
+                        <option value="AWS">Amazon Web Services (AWS)</option>
+                        <option value="Azure">Microsoft Azure</option>
+                        <option value="GCP">Google Cloud Platform</option>
+                        <option value="Multi-Cloud">Multi-Cloud / Hybrid</option>
                       </select>
                     </div>
-
-                    <div className="form-group">
-                      <label className="form-label">Key Objectives / Timelines</label>
-                      <textarea 
-                        className="form-control" 
-                        placeholder="Briefly describe current bottlenecks, scale requirements, or target completion dates..."
-                        value={formData.notes}
-                        onChange={(e) => setFormData({...formData, notes: e.target.value})}
-                      ></textarea>
+                    <div>
+                      <label className="field-label">Monthly Cloud Spend</label>
+                      <select 
+                        className="field-select"
+                        value={formData.spendTier}
+                        onChange={(e) => setFormData({...formData, spendTier: e.target.value})}
+                      >
+                        <option value="< $50k / mo">&lt; $50,000 / mo</option>
+                        <option value="$50k - $150k / mo">$50,000 – $150,000 / mo</option>
+                        <option value="$150k - $500k / mo">$150,000 – $500,000 / mo</option>
+                        <option value="> $500k / mo">&gt; $500,000 / mo</option>
+                      </select>
                     </div>
+                  </div>
 
-                    <button type="submit" className="btn-primary" style={{ width: '100%' }}>
-                      Submit Architecture Review Request
-                    </button>
-                  </form>
-                </div>
+                  <div className="form-group-unified">
+                    <label className="field-label">Primary Focus</label>
+                    <select 
+                      className="field-select"
+                      value={formData.scope}
+                      onChange={(e) => setFormData({...formData, scope: e.target.value})}
+                    >
+                      <option value="Kubernetes Platform Architecture">Kubernetes Platform Architecture</option>
+                      <option value="FinOps & Cost Optimization Audit">FinOps & Cost Optimization Audit</option>
+                      <option value="AI / GPU Infrastructure Orchestration">AI / GPU Infrastructure Orchestration</option>
+                      <option value="Zero-Downtime Cloud Migration">Zero-Downtime Cloud Migration</option>
+                      <option value="DevSecOps & Compliance Hardening">DevSecOps & Compliance Hardening</option>
+                    </select>
+                  </div>
+
+                  <div className="form-group-unified">
+                    <label className="field-label">Key Objectives / Timelines</label>
+                    <textarea 
+                      className="field-textarea" 
+                      placeholder="Briefly describe current bottlenecks, scale requirements, or target completion dates..."
+                      value={formData.notes}
+                      onChange={(e) => setFormData({...formData, notes: e.target.value})}
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" className="btn-cta" style={{ width: '100%', padding: '14px' }}>
+                    Submit Architecture Review Request
+                  </button>
+                </form>
               </div>
             </div>
           </section>
 
           {/* Enterprise Footer */}
-          <footer className="footer">
+          <footer className="footer-unified">
             <div className="container">
-              <div className="footer-grid">
+              <div className="footer-main-row">
                 <div>
-                  <div className="brand" style={{ marginBottom: '12px' }}>
+                  <div className="brand-link" style={{ marginBottom: '14px' }}>
                     <img src="logo.png" alt="CloudSpecialist AI Logo" style={{ width: '32px', height: '32px', borderRadius: '6px' }}/>
-                    <div className="brand-name" style={{ fontSize: '17px' }}>CLOUDSPECIALIST <span>AI</span></div>
+                    <div className="brand-title-text" style={{ fontSize: '17px' }}>CLOUDSPECIALIST <span>AI</span></div>
                   </div>
                   <p style={{ maxWidth: '320px', lineHeight: 1.6, color: 'var(--text-muted)' }}>
                     Enterprise cloud engineering and platform modernization firm delivering mission-critical Kubernetes, FinOps, and AI infrastructure.
                   </p>
-                  <div style={{ marginTop: '12px', color: 'var(--accent-blue-light)', fontFamily: 'var(--font-mono)', fontSize: '13px' }}>
+                  <div style={{ marginTop: '14px', color: 'var(--accent-cyan)', fontFamily: 'var(--font-mono)', fontSize: '13px' }}>
                     hello@cloudspecialist.work
                   </div>
                 </div>
@@ -1411,9 +1116,8 @@ ${formData.notes}`;
                 <div className="footer-col">
                   <h5>Standards</h5>
                   <ul>
-                    <li><a href="#evidence">Audited Benchmarks</a></li>
-                    <li><a href="#framework">Engagement Framework</a></li>
-                    <li><a href="#case-studies">Case Studies</a></li>
+                    <li><a href="#benchmarks">Audited Benchmarks</a></li>
+                    <li><a href="#cases">Case Studies</a></li>
                     <li><a href="#consultation">Architecture Review</a></li>
                   </ul>
                 </div>
@@ -1429,9 +1133,9 @@ ${formData.notes}`;
                 </div>
               </div>
 
-              <div className="footer-bottom">
+              <div className="footer-bottom-row">
                 <div>© 2026 CloudSpecialist AI. All rights reserved. Enterprise engineering standards.</div>
-                <div style={{ display: 'flex', gap: '20px' }}>
+                <div style={{ display: 'flex', gap: '24px' }}>
                   <a href="#">Security Baseline</a>
                   <a href="#">Privacy Policy</a>
                   <a href="#">Terms of Engagement</a>
